@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invest UO | Registration Page </title>
+
+  <link rel="stylesheet" href="../css/fonts">
+  <link rel="stylesheet" href="../css/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../css/adminlte.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <link favicon rel="icon" href="../images/logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+     body.hold-transition.register-page {
+    background: url(../images/rege.png) no-repeat center center fixed;
+    background-size: cover;
+    background-position: top;
+}
+.login-box, .register-box {
+    width: 600px;
+}
+.captcha-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+canvas {
+  background: #f0f0f0;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background: #0078d7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.w-50 {
+    width: 48% !important;
+}
+button[type="submit"]:hover {
+  background: #005fa3;
+}
+
+button[type="button"] {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.logo_sec img {
+    min-height: 86px;
+    height: 87px;
+}
+  </style>
+</head>
+<body class="hold-transition register-page">
+<div class="register-box">
+  <div class="card card-outline card-primary">
+    <div class="card-header text-center">
+      <div class="logo_sec">
+        <img src="../images/logo1.png" alt="logo.png">
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="login-box-msg">Entrepreneur Registration</p>
+
+      <form action="index.html" method="post">
+        <div class="col-md-12 d-flex">
+          <div class="col-md-6">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Company/Enterprise Name">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-user orange"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Please Enter Pan Number">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-id-card orange"></span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 d-flex">
+          <div class="col-md-6">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Please Enter First Name">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-user orange"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Please Enter Last Name">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-user orange"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12 d-flex">
+          <div class="col-md-6">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Please Enter Email">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-envelope orange"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Please Enter Mobile No">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-mobile-alt orange"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 d-flex">
+          <div class="col-md-12">
+            <div class="captcha-container">
+              <img src="../images/captch.jpg" alt="CAPTCHA" class="captcha-image">
+              <button type="button" onclick="generateCaptcha()">↻</button>
+              <input type="text" id="captchaInput" class="form-control w-50" placeholder="Enter CAPTCHA">
+            </div>
+          </div>
+          <div class="col-md-6">
+            
+          </div>
+        </div>
+       
+ 
+        <div class="row">
+          <div class="col-12 d-flex">
+         
+          <!-- /.col -->
+       
+            
+            <div class="col-6">
+              <button href="index.html" type="submit" class="btn btn-info btn-block ml-2" style="width:90px;">Register</button>
+      </div>
+      <div class="col-6 align-items-end" style="
+      justify-content: flex-end;
+      display: flex;
+  ">
+     
+            <button type="submit" class="btn btn-default btn-block mr-2"  style="width:90px;">Home</button>
+        </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+      
+      <a href="index.html" class="text-center mt-4 ml-3">If you have already Register, <span class="text_highlighted">Click Here!</span></a>
+    </div>
+    <!-- /.form-box -->
+  </div><!-- /.card -->
+</div>
+<!-- /.register-box -->
+
+<!-- jQuery -->
+
+<script>
+  let captchaText = "";
+
+function generateCaptcha() {
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  captchaText = "";
+  for (let i = 0; i < 6; i++) {
+    captchaText += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+
+  const canvas = document.getElementById("captchaCanvas");
+  const ctx = canvas.getContext("2d");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.font = "24px Arial";
+  ctx.fillStyle = "#000";
+  ctx.fillText(captchaText, 10, 30);
+}
+
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const userInput = document.getElementById("captchaInput").value.trim();
+  const errorMsg = document.getElementById("captchaError");
+
+  if (userInput === captchaText) {
+    errorMsg.textContent = "";
+    alert("CAPTCHA validated! Logging in...");
+    // Proceed with actual login
+  } else {
+    errorMsg.textContent = "Incorrect CAPTCHA. Please try again.";
+    generateCaptcha();
+  }
+});
+
+
+</script>
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+</body>
+</html>

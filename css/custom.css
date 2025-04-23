@@ -1,0 +1,316 @@
+
+@font-face {
+    font-family: 'Noto Sans Regular';
+    src: url('./fonts/NotoSans-Regular.eot');
+    src: url('./fonts/NotoSans-Regular.eot?#iefix') format('embedded-opentype'), url('./fonts/NotoSans-Regular.woff2') format('woff2'), url('./fonts/NotoSans-Regular.woff') format('woff'), url('./fonts/NotoSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Sans Medium';
+    src: url('./fonts/NotoSans-Medium.eot');
+    src: url('./fonts/NotoSans-Medium.eot?#iefix') format('embedded-opentype'), url('./fonts/NotoSans-Medium.woff2') format('woff2'), url('./fonts/NotoSans-Medium.woff') format('woff'), url('./fonts/NotoSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Sans SemiBold';
+    src: url('./fonts/NotoSans-SemiBold.eot');
+    src: url('./fonts/NotoSans-SemiBold.eot?#iefix') format('embedded-opentype'), url('./fonts/NotoSans-SemiBold.woff2') format('woff2'), url('./fonts/NotoSans-SemiBold.woff') format('woff'), url('./fonts/NotoSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Sans Bold';
+    src: url('./fonts/NotoSans-Bold.eot');
+    src: url('./fonts/NotoSans-Bold.eot?#iefix') format('embedded-opentype'), url('./fonts/NotoSans-Bold.woff2') format('woff2'), url('./fonts/NotoSans-Bold.woff') format('woff'), url('./fonts/NotoSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Sans Display Regular';
+    src: url('./fonts/NotoSansDisplay-Regular.eot');
+    src: url('./fonts/NotoSansDisplay-Regular.eot?#iefix') format('embedded-opentype'), url('./fonts/NotoSansDisplay-Regular.woff2') format('woff2'), url('./fonts/NotoSansDisplay-Regular.woff') format('woff'), url('./fonts/NotoSansDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Sans Display SemiBold';
+    src: url('./fonts/NotoSansDisplay-SemiBold.eot');
+    src: url('./fonts/NotoSansDisplay-SemiBold.eot?#iefix') format('embedded-opentype'), url('./fonts/NotoSansDisplay-SemiBold.woff2') format('woff2'), url('./fonts/NotoSansDisplay-SemiBold.woff') format('woff'), url('./fonts/NotoSansDisplay-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+.fnt_m_36 {
+    font-family: 'Noto Sans Medium';
+    font-size: 36px;
+}
+.fnt_m_24 {
+    font-family: 'Noto Sans Medium';
+    font-size: 24px;
+}
+.fnt_b_24 {
+    font-family: 'Noto Sans Bold';
+    font-size: 24px;
+}
+.fnt_dsb_16 {
+    font-family: 'Noto Sans Display SemiBold';
+    font-size: 16px;
+}
+.fnt_sb_16 {
+    font-family: 'Noto Sans SemiBold';
+    font-size: 16px;
+}
+.fnt_b_18 {
+    font-family: 'Noto Sans Bold';
+    font-size: 18px;
+}
+.fnt_dsb_20 {
+    font-family: 'Noto Sans SemiBold';
+    font-size: 15px;
+}
+.fnt_b_15 {
+    font-family: 'Noto Sans Bold';
+    font-size: 15px;
+}
+.fnt_dsb_15 {
+    font-family: 'Noto Sans SemiBold';
+    font-size: 19px;
+}
+.fnt_dsb_1_15 {
+    font-family: 'Noto Sans Display SemiBold';
+    font-size: 15px;
+}
+
+.fnt_b_16 {
+    font-family: 'Noto Sans Bold';
+    font-size: 16px;
+}
+.fnt_r_16 {
+    font-family: 'Noto Sans Regular';
+    font-size: 16px;
+}
+.fnt_r_14 {
+    font-family: 'Noto Sans Regular';
+    font-size: 14px;
+}
+.fnt_b_14 {
+    font-family: 'Noto Sans Bold';
+    font-size: 14px;
+}
+.fnt_sb_14 {
+    font-family: 'Noto Sans SemiBold';
+    font-size: 14px;
+}
+.fnt_sb_12 {
+    font-family: 'Noto Sans SemiBold';
+    font-size: 12px;
+}
+.fnt_r_12 {
+    font-family: 'Noto Sans Regular';
+    font-size: 12px;
+}
+.fnt_b_12 {
+    font-family: 'Noto Sans Bold';
+    font-size: 12px;
+}
+.fnt_m_12 {
+    font-family: 'Noto Sans Medium';;
+    font-size: 12px;
+}
+.fnt_r_13 {
+    font-family: 'Noto Sans Display Regular';
+    font-size: 13px;
+}
+.fnt_r_10 {
+    font-family: 'Noto Sans Regular';
+    font-size: 10px;
+}
+.fnt_r_8 {
+    font-family: 'Noto Sans Regular';
+    font-size: 8px;
+}
+.text_highlighted{
+   color: #ED7C13 ;
+}
+body{
+     font-family: 'Noto Sans Regular';
+}
+.login-box{
+max-width: 350px;
+min-height: 500px;
+width: 100%;
+margin: auto;
+}
+.login-wrapper {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+.login-card-body, .register-card-body {
+    border-radius: 10px;
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        padding: 0px 15px;
+    }
+}
+.login-or {
+    color: #007bff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+}
+.or-line {
+    background-color: #007bff;
+    height: 1px;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: block;
+}
+.span-or {
+    background-color: #fff;
+    display: block;
+    left: 50%;
+    margin-left: -20px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    width: 42px;
+}
+.Welcome_card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+background: linear-gradient(90deg, rgb(237 19 124) 0%, rgb(237 19 124) 31%, rgb(237 19 124) 64%);
+}
+.login-left{
+    border-radius: 6px 0 0 6px;
+    padding: 80px;
+}
+.btn-info {
+    color: #fff;
+    background-color:  #FF512F!important;
+    border-color:  #FF512F!important;
+    box-shadow: none;
+}
+.btn-default{
+    color: #fff;
+    background-color:  #6da0c5!important;
+    border-color: #6da0c5!important;
+    box-shadow: none;
+}
+label:not(.form-check-label):not(.custom-file-label){
+    color: #2b2d2e;
+    font-weight: normal;
+    font-size: 14px;
+}
+select .form-control option{
+    color:#6e7276;
+}
+.text-blue{
+    color: #007bff;
+}
+.form-control{
+    color:#6e7276;
+    font-size: 14px;
+}
+@media (min-width: 1200px) {
+    .col-lg-3 .small-box h3, .col-md-3 .small-box h3, .col-xl-3 .small-box h3 {
+        font-size: 24px;
+    }
+}
+.card-primary.card-outline {
+    border-top: 3px solid #F36B34;
+}
+.wrapper_footer{
+    padding: 15px 0px;
+}
+[class*=icheck-]>input:first-child+input[type=hidden]+label::before, [class*=icheck-]>input:first-child+label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #D3CFC8;
+    border-radius: 0;
+    margin-left: -29px;
+    margin-top: 3px;
+}
+[class*=icheck-]>input:first-child:checked+input[type=hidden]+label::after, [class*=icheck-]>input:first-child:checked+label::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-left: none;
+    border-top: none;
+    transform: translate(4px, 4.5px) rotate(45deg);
+    -ms-transform: translate(7.75px,4.5px) rotate(45deg);
+}
+.orange{
+    color:#FF512F!important;
+}
+.logo_sec img {
+    min-height: 70px;
+    height: 70px;
+  }
+  .form-check-input:checked {
+    background-color: #FF512F !important;
+    border-color: #FF512F !important;
+}
+.form-check-input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 .25rem #ffceace6 !important;
+}
+.btn-dark {
+    color: #fff;
+    background-color: #FF512F !important;
+    border-color: #FF512F !important;
+    box-shadow: none;
+}
+.form-control[type=file] {
+    overflow: hidden;
+    font-size: 12px;
+    font-family: 'Noto Sans Regular';
+    padding-top: 12px;
+    border-radius: 5px;
+    min-height: calc(1.5em + .75rem + 2px);
+}
+.accordion-button:not(.collapsed) {
+    color: #007bff !important;
+    background-color: transparent;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+    border-bottom: 1px solid #cccccc63;
+}
+.accordion-button:focus {
+    z-index: 3;
+    outline: 0;
+    box-shadow: none;
+}
+.nav-sidebar .nav-link p {
+    display: inline;
+    margin: 0;
+    white-space: normal;
+    font-size: 11px;
+}
+.btn-rounded {
+    border-radius: 8px !important;
+    padding: 8px 25px;
+    box-shadow: 1px 2px 3px #726f6f;
+    font-size: 18px;
+}
