@@ -145,41 +145,7 @@ button[type="button"] {
   <!-- /.card -->
 </div>
 <!-- /.login-box -->
-<script>
-  let captchaText = "";
 
-function generateCaptcha() {
-  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  captchaText = "";
-  for (let i = 0; i < 6; i++) {
-    captchaText += chars.charAt(Math.floor(Math.random() * chars.length));
-  }
-
-  const canvas = document.getElementById("captchaCanvas");
-  const ctx = canvas.getContext("2d");
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.font = "24px Arial";
-  ctx.fillStyle = "#000";
-  ctx.fillText(captchaText, 10, 30);
-}
-
-document.getElementById("loginForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const userInput = document.getElementById("captchaInput").value.trim();
-  const errorMsg = document.getElementById("captchaError");
-
-  if (userInput === captchaText) {
-    errorMsg.textContent = "";
-    alert("CAPTCHA validated! Logging in...");
-    // Proceed with actual login
-  } else {
-    errorMsg.textContent = "Incorrect CAPTCHA. Please try again.";
-    generateCaptcha();
-  }
-});
-
-
-</script>
 <!-- jQuery -->
 <script src="js/jquery.min.js"></script>
 <script src="js/adminlte.min.js"></script>
