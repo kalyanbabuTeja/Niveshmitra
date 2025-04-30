@@ -55,9 +55,17 @@
     font-family: 'Noto Sans Medium';
     font-size: 24px;
 }
+.fnt_r_36 {
+    font-family: 'Noto Sans Regular';
+    font-size: 36px;
+}
 .fnt_b_24 {
     font-family: 'Noto Sans Bold';
     font-size: 24px;
+}
+.fnt_b_75 {
+    font-family: 'Noto Sans Bold';
+    font-size: 75px;
 }
 .fnt_dsb_16 {
     font-family: 'Noto Sans Display SemiBold';
@@ -569,14 +577,31 @@ color: #fff;
     border: 2px solid  rgb(202 135 167) !important;
     color: #fff;
   }
-  .banner-section img {
+
+
+  .banner-section{
     max-width: 100%;
     position: relative;
     z-index: 0;
+    background-image:linear-gradient(to bottom, rgba(105, 41, 106, 0.5), rgba(255, 255, 255, 0.5)), url("../images/icon/Yogi.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 684px;
 }
 .banner{
     width: 100%;
+} */
+ .bg_grad_blue{
+    background: linear-gradient(to right, #69296A 0%, #69296A 100%);
+} 
+.text_box{
+    position: relative;
+    top: -68px;
+    left: 0px;
 }
+
+
 .content-with-icon {
         display: flex;
         gap: 8px;
@@ -595,6 +620,26 @@ color: #fff;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         transform: translateY(-5px)
     }
+    .primary-card {
+        position: relative;
+        background: #fff;
+
+        padding-top: 40px; /* Space for triangle */
+      }
+      
+      .primary-card::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 25px solid #ef2a74; /* triangle color */
+        z-index: 1;
+      }
   .icon {
     flex-shrink: 0; /* Prevents icon from shrinking */
   }
@@ -623,6 +668,7 @@ color: #fff;
     color: #fff;
     margin: 0; /* Remove default margins */
   }
+  
   @media screen and (max-width: 1440px) {
     .circle-cards-grid {
         gap: 0;
@@ -630,8 +676,34 @@ color: #fff;
         text-align: center;
     }
 }
-.circle-card:first-child {
-    --accent-color: #b8df4e;
+.circle-cards-grid {
+    grid-gap: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 7rem;
+    max-width: 100%;
+    min-height: 350px;
+}
+.circle-card {
+    align-items: center;
+    aspect-ratio: 1;
+    background-color: var(--bgColor);
+    background: #fff;
+    border: .2rem solid rgb(244 198 25);
+    border-radius: 50%;
+    box-shadow: .2rem .2rem .04rem #000000bf;
+    display: flex;
+    flex-direction: column;
+    height: 160px;
+    justify-content: center;
+    margin-top: 6.5rem;
+    max-height: 200px;
+    max-width: 200px;
+    padding: .8rem;
+    transform: translateY(0);
+    transition: background-color .3s ease-in-out;
+    width: 160px;
 }
 .circle-card:nth-child(odd) {
     margin-left: auto;
@@ -641,37 +713,7 @@ color: #fff;
 .circle-card, .circle-card .circle {
     position: relative;
 }
-.circle-card {
-    align-items: center;
-    aspect-ratio: 1;
-    background-color: var(--bgColor);
-    background: #fff;
-    border: .2rem solid var(--accent-color);
-    border-radius: 50%;
-    box-shadow: .2rem .2rem .04rem #000000bf;
-    display: flex
-;
-    flex-direction: column;
-    height: 160px;
-    justify-content: center;
-    margin-top: 6.5rem;
-    max-height: 200px;
-    max-width: 200px;
-    padding: .8rem;
-    transform: translateY(0);
-    transition: background-color .3s ease-in-out;
-    width: 160px;
-}
-.cursor-pointer {
-    cursor: pointer !important;
-}
-.circle-card, .circle-card .circle {
-    position: relative;
-}
 .circle-card .descr {
-    color: var(--accent-color);
-    font-size: 1rem;
-    font-weight: 900;
     line-height: 1;
     margin-top: .5rem;
     overflow: visible;
@@ -681,7 +723,7 @@ color: #fff;
     z-index: 1;
 }
 .circle-card::after {
-    background: linear-gradient(to bottom, #0000, var(--accent-color) 50%, #0000);
+    background: linear-gradient(to bottom, #0000, rgb(244 198 25) 50%, #0000);
     content: "";
     height: calc(10% + 120px);
     left: calc(50% - 1px);
@@ -691,90 +733,275 @@ color: #fff;
     z-index: -1;
 }
 .circle-card:first-child {
-    --accent-color: #b8df4e;
+    color:rgb(244 198 25) ;
+    
 }
-.cursor-pointer {
-    cursor: pointer !important;
+.circle-card .icon-bg {
+    align-items: center;
+    background: radial-gradient(ellipse at center, #fff9 0, #fff0 100%);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    opacity: .2;
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    z-index: -1;
+}
+.circle-card .indicator {
+    background-color: rgb(244 198 25) ;
+    border-radius: .5rem;
+    color: #fff;
+    font-weight: 700;
+    left: 50%;
+    border-radius: 50%;
+    padding: .2rem .5rem;
+    position: absolute;
+    top: -190px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.circle-card:first-child:hover{  
+    background: rgb(244 198 25) ;
+    border: 2px solid rgb(244 198 25) ;
+    color: #fff;
 }
 .circle-card:nth-child(2) {
-    --accent-color: #4cbccb;
-}
-.circle-card:nth-child(2n) {
-    margin-left: auto;
-    margin-right: auto;
-    transform: translateY(50%);
-}
-.circle-card, .circle-card .circle {
-    position: relative;
-}
-.circle-card {
-    align-items: center;
-    aspect-ratio: 1;
-    background-color: var(--bgColor);
-    background: #fff;
-    border: .2rem solid var(--accent-color);
-    border-radius: 50%;
-    box-shadow: .2rem .2rem .04rem #000000bf;
-    display: flex
-;
-    flex-direction: column;
-    height: 160px;
-    justify-content: center;
-    margin-top: 6.5rem;
-    max-height: 200px;
-    max-width: 200px;
-    padding: .8rem;
-    transform: translateY(0);
-    transition: background-color .3s ease-in-out;
-    width: 160px;
-}
-.cursor-pointer {
-    cursor: pointer !important;
-}
-.circle-card, .circle-card .circle {
-    position: relative;
+    color: #4cbccb;
+    border: 2px solid;
 }
 
-*, :after, :before {
-    box-sizing: border-box;
+.circle-card:nth-child(2):hover {
+    background: #4cbccb;
+    border: 2px solid #4cbccb;
+    color: #fff;
 }
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+.circle-card .indicator_2 {
+    background-color: #4cbccb;
+    border-radius: .5rem;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50%;
+    left: 50%;
+    padding: .2rem .5rem;
+    position: absolute;
+    top: -190px;
+    transform: translateX(-50%);
+    z-index: 2;
 }
-user agent stylesheet
-div {
-    display: block;
-    unicode-bidi: isolate;
+.circle-card .indicator_3 {
+    background-color: red;
+    border-radius: .5rem;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50%;
+    left: 50%;
+    padding: .2rem .5rem;
+    position: absolute;
+    top: -190px;
+    transform: translateX(-50%);
+    z-index: 2;
 }
-.circle-card:nth-child(2) {
-    --accent-color: #4cbccb;
+.circle-card:nth-child(3) {
+    color: red;
+    border: 2px solid;
 }
-.cursor-pointer {
-    cursor: pointer !important;
+.circle-card:nth-child(3):hover {
+    background: red;
+    border: 2px solid red;
+    color: #fff;
 }
-@media screen and (max-width: 1440px) {
-    .circle-cards-grid {
-        gap: 0;
-        place-items: center;
-        text-align: center;
-    }
+.circle-card .indicator_4 {
+    background-color: rgb(40 143 209);
+    border-radius: .5rem;
+    color: #fff;
+    font-weight: 700;
+    left: 50%;
+    border-radius: 50%;
+    padding: .2rem .5rem;
+    position: absolute;
+    top: -190px;
+    transform: translateX(-50%);
+    z-index: 2;
 }
-@media screen and (max-width: 1440px) {
-    .circle-cards-grid {
-        gap: 0;
-        place-items: center;
-        text-align: center;
-    }
+.circle-card:nth-child(4) {
+    color: rgb(40 143 209);
+    border: 2px solid;
 }
-.circle-cards-grid {
-    grid-gap: 1.5rem;
-    display: grid
-;
-    gap: 1.5rem;
-    grid-template-columns: repeat(7, 1fr);
-    margin-top: 7rem;
+.circle-card:nth-child(4):hover {
+    background: rgb(40 143 209);
+    border: 2px solid rgb(40 143 209);
+    color: #fff;
+}
+.circle-card .indicator_5 {
+    background-color: rgb(243 107 52);
+    border-radius: .5rem;
+    color: #fff;
+    font-weight: 700;
+    left: 50%;
+    border-radius: 50%;
+    padding: .2rem .5rem;
+    position: absolute;
+    top: -190px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.circle-card:nth-child(5) {
+    color: rgb(243 107 52);
+    border: 2px solid;
+}
+.circle-card:nth-child(5):hover {
+    background: rgb(243 107 52);
+    border: 2px solid rgb(243 107 52);
+    color: #fff;
+}
+.circle-card .indicator_6 {
+    background-color: #1b1e6f;
+    border-radius: .5rem;
+    color: #fff;
+    font-weight: 700;
+    left: 50%;
+    padding: .2rem .5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -190px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.circle-card:nth-child(6) {
+    color: #1b1e6f;
+    border: 2px solid;
+}
+.circle-card:nth-child(6):hover {
+    background: #1b1e6f;
+    border: 2px solid #1b1e6f;
+    color: #fff;
+}
+.circle-card .indicator_7 {
+    background-color: rgb(237 19 124) ;
+    border-radius: .5rem;
+    color: #fff;
+    font-weight: 700;
+    left: 50%;
+    border-radius: 50%;
+    padding: .2rem .5rem;
+    position: absolute;
+    top: -190px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.circle-card:nth-child(7) {
+    color: rgb(237 19 124) ;
+    border: 2px solid;
+}
+.circle-card:nth-child(7):hover {
+    background: rgb(237 19 124) ;
+    border: 2px solid rgb(237 19 124) ;
+    color: #fff;
+}
+.circle-card:nth-child(2)::after {
+    background: linear-gradient(to bottom, #0000, #4cbccb 50%, #0000);
+}
+.circle-card:nth-child(3)::after {
+    background: linear-gradient(to bottom, #0000, red 50%, #0000);
+}
+.circle-card:nth-child(4)::after {
+    background: linear-gradient(to bottom, #0000, rgb(40 143 209), #0000);
+}
+.circle-card:nth-child(5)::after {
+    background: linear-gradient(to bottom, #0000, rgb(243 107 52), #0000);
+}
+.circle-card:nth-child(6)::after {
+    background: linear-gradient(to bottom, #0000, #1b1e6f, #0000);
+}
+.circle-card:nth-child(7)::after {
+    background: linear-gradient(to bottom, #0000, rgb(237 19 124), #0000);
+}
+.applicationProccess{
+    background: url("../images/icon/video-background.svg");
+    animation: slide-in linear infinite alternate;
+    animation-duration: 4s;
+}
+.applicationProccess{
+   background: url("../images/icon/video-background.svg");
+   animation: slide-in linear infinite alternate;
+    animation-duration: 10s;
+  background-size:cover;
+  -webkit-animation: slidein 10s;
+  animation: slidein 10s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;   
+  position: absolute; 
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+
+}
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:300px; }
+to {background-position: -50px 0px;background-size:250px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:300px; }
+to {background-position: -50px 0px;background-size:750px;} */
+
+}
+.seeMore{
+    font-size: 16px;
+    border: 0px;
+    background: transparent;
+
+}
+.service_card{
+    max-width: 200px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.service_card:hover{
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+a{
+    text-decoration: underline;
+    color: #1b1e6f;
+}
+.pink{
+    color: #EE276B;
+}
+.heading{
+color:#772B69;
+}
+.heading {
+    position: relative;
+    padding-bottom: 5px;
+  }
+  
+  .heading::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 3px;
+    background-color: #EE276B;
+    right: 0;
+    margin: auto;
+  }
+  .Department{
+    background: url("../images/icon/department.png");
+    background-size: cover;
+    background-position:top;
+    background-repeat: no-repeat;
+    height: 400px;
     max-width: 100%;
-    min-height: 350px;
-}
+    position: relative;
+  }
+  
