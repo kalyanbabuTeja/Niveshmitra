@@ -137,7 +137,7 @@
     font-size: 8px;
 }
 .text_highlighted{
-   color: #ED7C13 ;
+   color: #ac1b57 !important ;
 }
 body{
      font-family: 'Noto Sans Regular';
@@ -232,7 +232,7 @@ select .form-control option{
     }
 }
 .card-primary.card-outline {
-    border-top: 3px solid #F36B34;
+    border-top: 3px solid #ac1b57 !important;
 }
 .wrapper_footer{
     padding: 15px 0px;
@@ -263,7 +263,7 @@ select .form-control option{
     -ms-transform: translate(7.75px,4.5px) rotate(45deg);
 }
 .orange{
-    color:#FF512F!important;
+    color:#ac1b57 !important;
 }
 .logo_sec img {
     min-height: 70px;
@@ -313,4 +313,8 @@ select .form-control option{
     padding: 8px 25px;
     box-shadow: 1px 2px 3px #726f6f;
     font-size: 18px;
+}
+.table>:not(:last-child)>:last-child>* {
+    border-bottom-color: #e7e7e7 !important;
+    border-width: 1px;
 }

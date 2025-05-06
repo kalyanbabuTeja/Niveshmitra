@@ -1122,7 +1122,7 @@ color:#772B69;
 /*********Industry Details*****************/
 
   #news-slider {
-    margin-top: 80px;
+    margin-top: 40px;
   }
   .post-slide {
     background: #fff;
@@ -1135,7 +1135,7 @@ color:#772B69;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    margin: -12px 15px 8px 15px;
+    /* margin: -12px 15px 8px 15px; */
     margin-left: -10px;
   }
   .post-slide .post-img img {
