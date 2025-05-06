@@ -201,8 +201,8 @@ background: linear-gradient(90deg, rgb(237 19 124) 0%, rgb(237 19 124) 31%, rgb(
 }
 .btn-info {
     color: #fff;
-    background-color:  #FF512F!important;
-    border-color:  #FF512F!important;
+    background-color:  #ac1b57 !important;
+    border-color:  #ac1b57!important;
     box-shadow: none;
 }
 .btn-default{
@@ -269,14 +269,14 @@ select .form-control option{
     min-height: 70px;
     height: 70px;
   }
-  .form-check-input:checked {
+  /* .form-check-input:checked {
     background-color: #FF512F !important;
     border-color: #FF512F !important;
-}
-.form-check-input:focus {
+} */
+/* .form-check-input:focus {
     outline: 0;
     box-shadow: 0 0 0 .25rem #ffceace6 !important;
-}
+} */
 .btn-dark {
     color: #fff;
     background-color: #FF512F !important;
