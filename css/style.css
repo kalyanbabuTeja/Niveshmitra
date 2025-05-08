@@ -1018,7 +1018,7 @@ to {background-position: -50px 0px;background-size:750px;}
     text-decoration: underline;
 }
 .StepBystep{
-    background: url("../images/icon/step_bg_image.png");
+    /* background: url("../images/icon/step_bg_image.png"); */
 }
 .step_7{
     display: flex;
@@ -1260,3 +1260,18 @@ color:#772B69;
   }
   
 /*********Industry Details*****************/
+
+.marquee div {
+    display: block;
+    position: absolute; 
+    animation: marquee 5s linear infinite;
+}
+/* span with text */
+.marquee span {
+white-space: nowrap;
+}
+/* keyframe */
+@keyframes marquee {
+    0% { left: 100%; }
+    100% { left: 0%; }
+}
