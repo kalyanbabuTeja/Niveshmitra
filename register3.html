@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Welcome to Nivesh Mitra</title>
+      <link rel="stylesheet" href="css/all.min.css">
+      <link rel="stylesheet" href="css/adminlte.min.css">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/custom.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <!-- Ionicons -->
+      <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+      <style>
+         body{
+         background: url("../Niveshmitra/images/register.jpg");
+             background-size: cover;
+             background-position: center;
+            background-repeat: no-repeat;
+         }
+           .btn-dark {
+    color: #fff;
+    background-color: #3788C8 !important;
+    border-color: #3788C8 !important;
+    box-shadow: none;
+}
+.logo_sec img {
+ min-height: auto;
+ height: auto;
+    width: 100%;
+}
+.images_login1{
+   background: url("../Niveshmitra/images/login.jpg");
+}
+.images_login1{
+    position: relative;
+}
+.images_register img{
+    position: absolute;
+    max-width: 800px;
+    top: 0%;
+}
+
+
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+       <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="upinvest-logo">
+                   <img src="images/logo.png" alt="logo">
+                </div>
+            </div>
+        </div>
+        <div class="images_register">
+               <!-- <img src="images/register.jpg" alt="register"> -->
+       </div>
+    </div>
+       <div class="col-md-4">
+      
+        <div class="card px-5 py-3 my-5">
+          
+                    <div class="logo_sec py-3">
+                        <img src="images/logo1.png" alt="logo.png" width="100%"; height="auto">
+                      </div>
+   
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Login ID (PAN No)</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="captcha-container d-flex justify-content-between">
+                    <img src="images/captch.jpg" alt="CAPTCHA" class="captcha-image">
+                    <button type="button" onclick="generateCaptcha()" class="bg-transparent border-0">↻</button>
+                    <input type="text" id="captchaInput" class="form-control w-50" placeholder="Enter CAPTCHA"> 
+                  </div>
+                  <p><a href="#" class="text-decoration-none fnt_r_12">Forget Password</a></p>
+                <button type="submit" class="btn btn-block btn-dark my-3 btn-block">Login</button>
+                 <p class="text-center fnt_b_14 light_blue">OR</p>
+                 <button type="submit" class="my-3 btn btn-block btn-outline-danger text-black">Register to create Account</button>
+              </form>
+        </div>
+       </div>
+         </div>
+      </div>
+ 
+   </body>
+</html>

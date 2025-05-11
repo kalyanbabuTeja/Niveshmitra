@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Multi-Step Form with Progress Bar</title>
+      <style>
+        
+      </style>
+   </head>
+   <body>
+      <div class="form-container">
+         <div class="steps">
+            <div class="step active" id="step-1">1<br>Basic Details</div>
+            <div class="step" id="step-2">2<br>Communication Address</div>
+            <div class="step" id="step-3">3<br>Project Details(New Investmen)</div>
+            <div class="step" id="step-4">4<br>Employment Details</div>
+         </div>
+         <!-- Progress Line with Bar -->
+         <div class="step-line">
+            <div class="progress-bar" id="progressBar"></div>
+         </div>
+         <form id="multiStepForm">
+            <!-- Step 1 -->
+            <div class="step-content" id="step1">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="form-group">
+                        <label class="col-form-label"> Name of Industrial
+                        Undertaking</label>
+                        <div>
+                           <input type="text" class="form-control">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="step-content hidden" id="step2">
+               <p>Account Details Placeholder</p>
+            </div>
+            <!-- Step 3 -->
+            <div class="step-content hidden" id="step3">
+               <p>Confirmation Placeholder</p>
+            </div>
+            <!-- Step 4 -->
+            <div class="step-content hidden" id="step4">
+               <p>Reject</p>
+            </div>
+            <div class="buttons">
+               <button type="button" class="btn-prev" onclick="changeStep(-1)">Previous</button>
+               <button type="button" class="btn-next" onclick="changeStep(1)">Next</button>
+            </div>
+         </form>
+      </div>
+      <script>
+
+      </script>
+   </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Nivesh Mitra | Dashboard</title>
+      <link rel="stylesheet" href="css/fonts">
+      <link rel="stylesheet" href="css/icheck-bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- Theme style -->
+      <link rel="stylesheet" href="css/adminlte.min.css">
+      <link rel="stylesheet" href="css/custom.css">
+      <link rel="stylesheet" href="css/freestyle.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <!-- Ionicons -->
+      <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+
+<style>
+       .steps {
+         display: flex;
+         justify-content: space-around;
+         margin-bottom: 10px;
+         }
+         .step {
+         text-align: center;
+         font-weight: bold;
+         color: gray;
+         }
+         .step.active {
+         color: #1e40af;
+         }
+         .step-line {
+         height: 2px;
+         background: #e5e7eb;
+         margin: 5px 0 20px;
+         position: relative;
+         }
+         .progress-bar {
+         height: 2px;
+         background: #1e40af;
+         width: 0%;
+         position: absolute;
+         top: 0;
+         left: 0;
+         transition: width 0.3s ease;
+         }
+         .form-group {
+         margin-bottom: 15px;
+         }
+         label {
+         display: block;
+         margin-bottom: 5px;
+         font-weight: bold;
+         }
+         input, select {
+         width: 100%;
+         padding: 10px;
+         box-sizing: border-box;
+         border: 1px solid #ccc;
+         border-radius: 6px;
+         }
+         .buttons {
+         display: flex;
+         justify-content: space-between;
+         margin-top: 20px;
+         }
+         .buttons button {
+         padding: 10px 20px;
+         border: none;
+         border-radius: 6px;
+         cursor: pointer;
+         }
+         .btn-prev {
+         background: #e5e7eb;
+         color: black;
+         }
+         .btn-next {
+         background: #1e40af;
+         color: white;
+         }
+         .hidden {
+         display: none;
+         }
+        </style>
+   </head>
+   <body class="hold-transition sidebar-mini layout-fixed">
+      <div class="wrapper">
+         <!-- Preloader -->
+         
+         <!-- Navbar -->
+         <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__shake" src="images/logo.png" alt="logo.png" height="60" width="60">
+          </div>
+        
+          <!-- Navbar -->
+           
+          <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="index.html" class="brand-link p-0 pt-1">
+                 <div class="logo_sec">
+                <img src="images/logo1.png" alt="logo.png" class="">
+              </div>
+                </a>
+              </li>
+              <!-- <li class="nav-item d-none d-sm-inline-block">
+                <a href="index3.html" class="nav-link">(Single Window System, Government of Uttar Pradesh)</a>
+              </li> -->
+              <!-- <li class="nav-item d-none d-sm-inline-block">
+                <a href="#" class="nav-link">&nbsp;</a>
+              </li> -->
+            </ul>
+        
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+              <!-- Navbar Search -->
+              <li class="nav-item">
+                <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                  <i class="fas fa-search"></i>
+                </a>
+                <div class="navbar-search-block" style="display: none;">
+                  <form class="form-inline">
+                    <div class="input-group input-group-sm">
+                      <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                      <div class="input-group-append">
+                        <button class="btn btn-navbar" type="submit">
+                          <i class="fas fa-search"></i>
+                        </button>
+                        <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                          <i class="fas fa-times"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </li>
+        
+              <!-- Messages Dropdown Menu -->
+             
+              <li class="nav-item">
+                <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html" role="button">
+                  <i class="fi fi-rr-exit"></i> Logout
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.navbar -->
+          
+          <nav class="main-header navbar navbar-expand-md navbar-light navbar-white p-0">
+            <div class="container-fluid">
+              
+        
+              <!-- index.html -->
+        <div class="menubarnm">
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a href="Dashboard.html"><i class="fi fi-rr-home"></i> Dashboard</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a href="#"><i class="fi fi-rr-layers"></i> Industry Registration</a>
+              </li> -->
+              <li class="nav-item dropdown">
+                <a href="#"><i class="fi fi-rr-browser"></i>Pre-Establishment ▾</a>
+                <ul class="dropdown-menu">
+                  <li><a href="Quesstionniare_cfe.html">Questionnaire</a></li>
+                  <li><a href="#">Combined Application Form</a></li>
+                  <li><a href="#">Respond To Query</a></li>
+                  <li><a class="dropdown-item" href="#">Print CFE </a></li>
+                  <li><a href="#">Print Acknowledgment </a></li>
+                  <li><a href="#">Track Your Application </a></li>
+                  <li><a href="#">Duplicate Receipt </a></li>
+                  <!-- <li class="dropdown-submenu">
+                    <a href="#">Marketing ▸</a>
+                    <ul class="inner-dropdown">
+                      <li><a href="#">Combined Application Form</a></li>
+                      <li><a href="#">Social Media</a></li>
+                      <li><a href="#">Email Marketing</a></li>
+                    </ul>
+                  </li> -->
+                  
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#"><i class="fi fi-rr-layers"></i> CFO ▾</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Questionnaire</a></li>
+                  <li><a href="#">Combined Application Form</a></li>
+                  <li><a href="#">Respond To Query</a></li>
+                  <li><a class="dropdown-item" href="#">Print CFE </a></li>
+                  <li><a href="#">Print Acknowledgment </a></li>
+                  <li><a href="#">Track Your Application </a></li>
+                  <li><a href="#">Duplicate Receipt </a></li>
+                  <!-- <li class="dropdown-submenu">
+                    <a href="#">Marketing ▸</a>
+                    <ul class="inner-dropdown">
+                      <li><a href="#">SEO</a></li>
+                      <li><a href="#">Social Media</a></li>
+                      <li><a href="#">Email Marketing</a></li>
+                    </ul>
+                  </li> -->
+                  <li><a href="#">Consulting</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#"><i class="fi fi-rr-envelope"></i> Renewals ▾</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Renewals</a></li>
+                  <li><a href="#">Renewals DashBoard</a></li>
+                  <!-- <li class="dropdown-submenu">
+                    <a href="#">Marketing ▸</a>
+                    <ul class="inner-dropdown">
+                      <li><a href="#">SEO</a></li>
+                      <li><a href="#">Social Media</a></li>
+                      <li><a href="#">Email Marketing</a></li>
+                    </ul>
+                  </li> -->
+                  <li><a href="#">Print Acknowledgment</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#"><i class="fi fi-rr-comments"></i> Grievance</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#"><i class="fi fi-rr-bank"></i> Payment Services ▾</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Payment Status</a></li>
+                  <li><a href="#">Payment History</a></li>
+                  <!-- <li class="dropdown-submenu">
+                    <a href="#">Marketing ▸</a>
+                    <ul class="inner-dropdown">
+                      <li><a href="#">SEO</a></li>
+                      <li><a href="#">Social Media</a></li>
+                      <li><a href="#">Email Marketing</a></li>
+                    </ul>
+                  </li> -->
+                  <li><a href="#">Payment Print</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#"><i class="fi fi-rr-exclamation"></i> Other Services</a>
+              </li>
+            </ul>
+          </div>
+          
+        
+        
+             
+        
+              <!-- Right navbar links -->
+              
+            </div>
+          </nav>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Entrepreneur Details</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Dahboard</a></li>
+              <li class="breadcrumb-item active">Application From</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="card direct-chat direct-chat-primary">
+            <div class="card-header ui-sortable-handle" style="cursor: move;">
+              <h3 class="card-title">Basic Details</h3>
+
+              <div class="card-tools">
+                
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                  <i class="fas fa-minus"></i>
+                </button>
+                
+              </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <!-- Conversations are loaded here -->
+              <div class="col-md-12 mt-3 d-flex" id="padding">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label"> Name of Industrial
+                      Undertaking</label>
+                    <div class="col-lg-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+
+              
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label">
+                      Name of Promoter</label>
+                    <div class="col-lg-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+               
+
+              </div>
+              <div class="col-md-12">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label">
+                      S/o.D/o.W/o</label>
+                    <div class="col-lg-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--/.direct-chat-messages-->
+
+              <!-- Contacts are loaded here -->
+              
+              <!-- /.direct-chat-pane -->
+            </div>
+            <!-- /.card-body -->
+            
+            <!-- /.card-footer-->
+          </div>
+
+          <div class="card direct-chat direct-chat-primary">
+            <div class="card-header ui-sortable-handle" style="cursor: move;">
+              <h3 class="card-title">Communication Address</h3>
+
+              <div class="card-tools">
+                
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                  <i class="fas fa-minus"></i>
+                </button>
+                
+              </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <!-- Conversations are loaded here -->
+              <div class="col-md-12 mt-3 d-flex" id="padding">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label"> State</label>
+                    <div class="col-lg-6 d-flex">
+                      <select id="7655" attrsearch="" name="7655" tabindex="48" class="form-control" data-displang="" data-datatype="custLGDHierarchy" data-groupno="61" required="true">
+                        <option value="" autocomplete="off"> 
+                        Please Select</option>	
+                        <option value="35" autocomplete="off">ANDAMAN AND NICOBAR ISLANDS</option>
+                        <option value="28" autocomplete="off">ANDHRA PRADESH</option>
+                        <option value="12" autocomplete="off">ARUNACHAL PRADESH</option>
+                        <option value="18" autocomplete="off">ASSAM</option>
+                        <option value="10" autocomplete="off">BIHAR</option>
+                        <option value="4" autocomplete="off">CHANDIGARH</option>
+                        <option value="22" autocomplete="off">CHHATTISGARH</option>
+                        <option value="26" autocomplete="off">DADRA AND NAGAR HAVELI</option>
+                        <option value="25" autocomplete="off">DAMAN AND DIU</option>
+                        <option value="7" autocomplete="off">DELHI</option>
+                        <option value="30" autocomplete="off">GOA</option>
+                        <option value="24" autocomplete="off">GUJARAT</option>
+                        <option value="6" autocomplete="off">HARYANA</option>
+                        <option value="2" autocomplete="off">HIMACHAL PRADESH</option>
+                        <option value="1" autocomplete="off">JAMMU AND KASHMIR</option>
+                        <option value="20" autocomplete="off">JHARKHAND</option>
+                        <option value="29" autocomplete="off">KARNATAKA</option>
+                        <option value="32" autocomplete="off">KERALA</option>
+                        <option value="31" autocomplete="off">LAKSHADWEEP</option>
+                        <option value="23" autocomplete="off">MADHYA PRADESH</option>
+                        <option value="27" autocomplete="off">MAHARASHTRA</option>
+                        <option value="14" autocomplete="off">MANIPUR</option>
+                        <option value="17" autocomplete="off">MEGHALAYA</option>
+                        <option value="15" autocomplete="off">MIZORAM</option>
+                        <option value="13" autocomplete="off">NAGALAND</option>
+                        <option value="21" autocomplete="off">ODISHA</option>
+                        <option value="34" autocomplete="off">PUDUCHERRY</option>
+                        <option value="3" autocomplete="off">PUNJAB</option>
+                        <option value="8" autocomplete="off">RAJASTHAN</option>
+                        <option value="11" autocomplete="off">SIKKIM</option>
+                        <option value="33" autocomplete="off">TAMIL NADU</option>
+                        <option value="36" autocomplete="off">TELANGANA</option>
+                        <option value="16" autocomplete="off">TRIPURA</option>
+                        <option value="5" autocomplete="off">UTTARAKHAND</option>
+                        <option value="9" autocomplete="off">UTTAR PRADESH</option>
+                        <option value="19" autocomplete="off">WEST BENGAL</option>
+                        </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label"> District</label>
+                    <div class="col-lg-6 d-flex">
+                      <select id="7660" attrsearch="" name="7660" tabindex="49" class="form-control" data-displang="E" data-datatype="custLGDHierarchy" data-groupno="62" required="true">
+                        <option value="" autocomplete="off"> 
+                        Please Select</option>	
+                        <option value="740" data-entity-level="null">EASTERN WEST KHASI HILLS</option><option value="273" data-entity-level="null">EAST GARO HILLS</option><option value="657" data-entity-level="null">EAST JAINTIA HILLS</option><option value="274" data-entity-level="null">EAST KHASI HILLS</option><option value="656" data-entity-level="null">NORTH GARO HILLS</option><option value="276" data-entity-level="null">RI BHOI</option><option value="277" data-entity-level="null">SOUTH GARO HILLS</option><option value="663" data-entity-level="null">SOUTH WEST GARO HILLS</option><option value="658" data-entity-level="null">SOUTH WEST KHASI HILLS</option><option value="278" data-entity-level="null">WEST GARO HILLS</option><option value="275" data-entity-level="null">WEST JAINTIA HILLS</option><option value="279" data-entity-level="null">WEST KHASI HILLS</option></select>
+                    </div>
+                  </div>
+                </div>
+              
+                
+              </div>
+              <div class="col-md-12 d-flex">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label"> Block</label>
+                    <div class="col-lg-6 d-flex">
+                      <select class="select form-control select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                        <option>Select Block</option>
+                        <option value="1">-</option>
+                        <option value="2">-</option>
+                        <option value="2">-</option>
+                        <option value="2">-</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label">Village/Town</label>
+                    <div class="col-lg-6 d-flex">
+                      <select class="select form-control select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                        <option>Select Village/Town</option>
+                        <option value="1">-</option>
+                        <option value="2">-</option>
+                        <option value="2">-</option>
+                        <option value="2">-</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 d-flex" id="padding">
+                 <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label">Address</label>
+                    <div class="col-lg-6 d-flex">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div> 
+                </div> 
+                <!-- <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label">9. Door No</label>
+                    <div class="col-lg-6 d-flex">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+                <div class="col-md-12 d-flex" id="padding">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label">Pincode</label>
+                    <div class="col-lg-6 d-flex">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label"> Mobile No</label>
+                    <div class="col-lg-6 d-flex">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-12 d-flex" id="padding">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label">Alternative Mobile
+                      No*</label>
+                    <div class="col-lg-6 d-flex">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label">Email</label>
+                    <div class="col-lg-6 d-flex">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <div class="col-md-12 d-flex" id="padding">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label"> Type of
+                      Organization*</label>
+                    <div class="col-lg-6 d-flex">
+                      <select name="ctl00$ContentPlaceHolder1$ddlType" id="ctl00_ContentPlaceHolder1_ddlType" disabled="disabled" tabindex="1" class="form-control">
+                        <option value="--Select--">--Select--</option>
+                        <option value="1">Proprietary</option>
+                        <option selected="selected" value="2">Partnership</option>
+                        <option value="3">PVT LTD</option>
+                        <option value="4">Public Limited</option>
+                        <option value="5">Co-Operative</option>
+                        <option value="6">LLP</option>
+                        <option value="7">Trust</option>
+                        <option value="8">PPP</option>
+
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label">Tel No(Landline)(If
+                      available)</label>
+                    <div class="col-lg-6 d-flex">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12 d-flex" id="padding">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label">Proposal For*</label>
+                    <div class="col-lg-6 d-flex">
+                      <select name="ctl00$ContentPlaceHolder1$ddlproposal" id="ctl00_ContentPlaceHolder1_ddlproposal" disabled="disabled" tabindex="1" class="form-control">
+                        <option value="--Select--">--Select--</option>
+                        <option selected="selected" value="1">New</option>
+                        <option value="2">Expansion</option>
+
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label"> Social Status</label>
+                    <div class="col-lg-6 d-flex">
+                      <select name="ctl00$ContentPlaceHolder1$ddlCaste" id="ctl00_ContentPlaceHolder1_ddlCaste" tabindex="1" class="form-control">
+                        <option value="--Select--">--Select--</option>
+                        <option value="1">OC</option>
+                        <option selected="selected" value="2">OBC</option>
+                        <option value="3">SC</option>
+                        <option value="4">ST</option>
+
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <div class="col-md-12 d-flex" id="padding">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label">Differently
+                      Abled*</label>
+                    <div class="col-lg-6 d-flex">
+                      <select name="ctl00$ContentPlaceHolder1$ddlDifferentlyabled" id="ctl00_ContentPlaceHolder1_ddlDifferentlyabled" tabindex="1" class="form-control">
+                        <option value="--Select--">--Select--</option>
+                        <option selected="selected" value="Yes">Yes</option>
+                        <option value="No">No</option>
+
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label">Women
+                      Entrepreneur</label>
+                    <div class="col-lg-6 d-flex">
+                      <select name="ctl00$ContentPlaceHolder1$ddlWomenEnterprenuer" id="ctl00_ContentPlaceHolder1_ddlWomenEnterprenuer" tabindex="1" class="form-control">
+                        <option value="--Select--">--Select--</option>
+                        <option selected="selected" value="Yes">Yes</option>
+                        <option value="No">No</option>
+
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <div class="col-md-12 d-flex" id="padding">
+											
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-lg-6 col-form-label">Minority*</label>
+                      <div class="col-lg-6 d-flex">
+                        <select name="ctl00$ContentPlaceHolder1$ddlMinority" id="ctl00_ContentPlaceHolder1_ddlMinority" tabindex="1" class="form-control">
+                          <option value="--Select--">--Select--</option>
+                          <option selected="selected" value="Yes">Yes</option>
+                          <option value="No">No</option>
+
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+         
+
+              <!--/.direct-chat-messages-->
+
+              <!-- Contacts are loaded here -->
+              
+              <!-- /.direct-chat-pane -->
+            </div>
+            <!-- /.card-body -->
+            
+            <!-- /.card-footer-->
+          </div>
+
+          <div class="card direct-chat direct-chat-primary">
+            <div class="card-header ui-sortable-handle" style="cursor: move;">
+              <h3 class="card-title">Project Details(New Investmen)</h3>
+
+              <div class="card-tools">
+                
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                  <i class="fas fa-minus"></i>
+                </button>
+                
+              </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <!-- Conversations are loaded here -->
+              <div class="col-md-12 d-flex mt-3" id="padding">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label"> Land Value(in
+                      Lakhs)*</label>
+                    <div class="col-lg-6 d-flex">
+                      <input type="text" class="form-control" value="200.00" disabled="">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label"> Building Value(in
+                      Lakhs)*</label>
+                    <div class="col-lg-6 d-flex">
+                      <input type="text" class="form-control" value="350.00" disabled="">
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+                <div class="col-md-12 d-flex" id="padding">
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-lg-6 col-form-label"> Plant and Machinery
+                        Value(in Lakhs) *</label>
+                      <div class="col-lg-6 d-flex">
+                        <input type="text" class="form-control" value="500.00" disabled="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-lg-6 col-form-label"> Total Value(in
+                        Lakhs)*</label>
+                      <div class="col-lg-6 d-flex">
+                        <input type="text" class="form-control" value="1050.00" disabled="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                </div>
+
+             
+
+              </div>
+         
+              <!--/.direct-chat-messages-->
+
+              <!-- Contacts are loaded here -->
+              
+              <!-- /.direct-chat-pane -->
+            </div>
+            <!-- /.card-body -->
+            
+            <!-- /.card-footer-->
+          </div>
+
+          <div class="card direct-chat direct-chat-primary">
+            <div class="card-header ui-sortable-handle" style="cursor: move;">
+              <h3 class="card-title">Employment Details</h3>
+
+              <div class="card-tools">
+                
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                  <i class="fas fa-minus"></i>
+                </button>
+                
+              </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <!-- Conversations are loaded here -->
+              <div class="col-md-12 d-flex mt-3">
+                <div class="col-xl-6">
+                  <h5 class="card-title">Direct </h5>
+                  <div class="col-md-12 d-flex p-0">
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label class="col-lg-6 col-form-label"> Male</label>
+                        <div class="col-lg-6">
+                          <input type="text" class="form-control" value="1">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label class="col-lg-6 col-form-label"> Female</label>
+                        <div class="col-lg-6">
+                          <input type="text" class="form-control" value="1">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="form-group row ml-1">
+                    <label class="col-lg-3 col-form-label">Toatl</label>
+                    <div class="col-lg-9">
+                      40
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-xl-6">
+                  <h5 class="card-title">In-direct *</h5>
+
+                  <div class="col-md-12 d-flex p-0 ">
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label class="col-lg-6 col-form-label">Male</label>
+                        <div class="col-lg-6">
+                          <input type="text" class="form-control" value="1">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label class="col-lg-6 col-form-label"> Female</label>
+                        <div class="col-lg-6">
+                          <input type="text" class="form-control" value="1">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 d-flex" id="padding">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label">Category of
+                      Registration*</label>
+                    <div class="col-lg-6 d-flex">
+                      <select name="ctl00$ContentPlaceHolder1$ddlcategory" id="ctl00_ContentPlaceHolder1_ddlcategory" tabindex="1" class="form-control">
+                        <option value="--Select--">--Select--</option>
+                        <option value="1">EM-PART I</option>
+                        <option selected="selected" value="2">Udyog Aadhaar</option>
+                        <option value="3">IND LICENSE</option>
+                        <option value="4">IEM</option>
+                        <option value="5">EOU</option>
+                        <option value="6">SEZ</option>
+
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-lg-6 col-form-label"> Registration No*</label>
+                    <div class="col-lg-6 d-flex">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <div class="col-md-12 d-flex" id="padding">
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-lg-6 col-form-label"> Registration
+                        Date(dd-MM-yyyy)*</label>
+                      <div class="col-lg-6 d-flex">
+                        <input type="date" class="form-control" value="24-03-2024">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-lg-6 col-form-label"> Type of Factories*</label>
+                      <div class="col-lg-6 d-flex">
+                        <select name="ctl00$ContentPlaceHolder1$ddlfactoryType" id="ctl00_ContentPlaceHolder1_ddlfactoryType" disabled="disabled" tabindex="1" class="form-control">
+                          <option value="--Select--">--Select--</option>
+                          <option selected="selected" value="1">Hazardous</option>
+                          <option value="2">Non-Hazardous</option>
+
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 d-flex text-center mb-3" id="padding">
+                  <div class="col-md-4">
+                    <a href="#basictab2"> <button type="submit" class="btn btn-rounded btn-warning btn-lg"> Clear
+                        all</button></a>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="#basictab2"><button type="submit" class="btn btn-rounded btn-primary btn-lg"> Save</button></a>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="LandDetails.html">
+                      <button type="submit" class="btn btn-rounded btn-success btn-lg">Next</button></a>
+                  </div>
+                </div>
+
+
+                </div>
+              </div>
+                </div>
+              </div>
+
+      
+            </div>
+            <!-- /.card-body -->
+            
+            <!-- /.card-footer-->
+          </div>
+              </div>
+            </div>
+        
+            
+            <!-- /.card-footer-->
+          </div>
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+    
+        <!-- /.row (main row) -->
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <!-- <strong>Copyright &copy; 2014-2021 <a href="#">Nivesh Mitra</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.2.0
+    </div> -->
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/adminlte.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js.map"></script>
+<script>
+             let currentStep = 1;
+         const totalSteps = 4;
+         
+         function updateProgressBar() {
+           const progress = ((currentStep - 1) / (totalSteps - 1)) * 100;
+           document.getElementById("progressBar").style.width = `${progress}%`;
+         }
+         
+         function changeStep(direction) {
+           // Hide current step
+           document.getElementById(`step${currentStep}`).classList.add('hidden');
+           document.getElementById(`step-${currentStep}`).classList.remove('active');
+         
+           // Update current step
+           currentStep += direction;
+           if (currentStep < 1) currentStep = 1;
+           if (currentStep > totalSteps) currentStep = totalSteps;
+         
+           // Show new step
+           document.getElementById(`step${currentStep}`).classList.remove('hidden');
+           document.getElementById(`step-${currentStep}`).classList.add('active');
+         
+           // Update progress bar
+           updateProgressBar();
+         }
+         
+         // Initialize progress on load
+         updateProgressBar();
+</script>
+</body>
+</html>
