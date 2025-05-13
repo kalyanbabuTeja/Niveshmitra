@@ -15,85 +15,84 @@
       <!-- Ionicons -->
       <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
       <style>
-         body{
-         background: url("../Niveshmitra/images/register.jpg");
-             background-size: cover;
-             background-position: center;
-            background-repeat: no-repeat;
-         }
-           .btn-dark {
-    color: #fff;
-    background-color: #3788C8 !important;
-    border-color: #3788C8 !important;
-    box-shadow: none;
+        label {
+    font-weight: 600;
+    color: #fff !important;
 }
-.logo_sec img {
- min-height: auto;
- height: auto;
-    width: 100%;
+body {
+  background: #f1f1f1;
 }
-.images_login1{
-   background: url("../Niveshmitra/images/login.jpg");
+.jumbotron{
+  background: #626262;
 }
-.images_login1{
-    position: relative;
+.box8{
+  box-shadow: 0px 0px 5px 1px #999;
 }
-.images_register img{
-    position: absolute;
-    max-width: 800px;
-    top: 0%;
+.mx-t3{
+  margin-top: -3rem;
+}
+.Whatsapp_label{
+   display: flex;
+   align-content: center;
 }
 
 
       </style>
    </head>
    <body>
-      <div class="container">
-         <div class="row">
-       <div class="col-md-8">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="upinvest-logo">
-                   <img src="images/logo.png" alt="logo">
-                </div>
-            </div>
-        </div>
-        <div class="images_register">
-               <!-- <img src="images/register.jpg" alt="register"> -->
-       </div>
-    </div>
-       <div class="col-md-4">
-      
-        <div class="card px-5 py-3 my-5">
-          
-                    <div class="logo_sec py-3">
-                        <img src="images/logo1.png" alt="logo.png" width="100%"; height="auto">
+      <div class="container mt-3">
+  <form>
+    <div class="row jumbotron box8">
+      <div class="col-sm-12 mx-t3 mb-4">
+       <div class="logo_sec py-3 d-flex justify-content-center">
+                        <img src="images/logo1.png" alt="logo.png">
                       </div>
-   
-            <form>
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Login ID (PAN No)</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="captcha-container d-flex justify-content-between">
-                    <img src="images/captch.jpg" alt="CAPTCHA" class="captcha-image">
-                    <button type="button" onclick="generateCaptcha()" class="bg-transparent border-0">↻</button>
-                    <input type="text" id="captchaInput" class="form-control w-50" placeholder="Enter CAPTCHA"> 
-                  </div>
-                  <p><a href="#" class="text-decoration-none fnt_r_12">Forget Password</a></p>
-                <button type="submit" class="btn btn-block btn-dark my-3 btn-block">Login</button>
-                 <p class="text-center fnt_b_14 light_blue">OR</p>
-                 <button type="submit" class="my-3 btn btn-block btn-outline-danger text-black">Register to create Account</button>
-              </form>
-        </div>
-       </div>
-         </div>
       </div>
+      <div class="col-sm-6 form-group">
+        <label for="name-f">Company</label>
+        <input type="text" class="form-control" placeholder="Company/Enterprise Name">
+      </div>
+      <div class="col-sm-6 form-group">
+        <label for="name-l">Please Enter Pan Number</label>
+        <input type="text" class="form-control" placeholder="Please Enter Pan Number">
+      </div>
+      <div class="col-sm-6 form-group">
+        <label for="email">Date of Incorporation</label>
+       <input type="text" class="form-control" placeholder="Date of Incorporation ">
+      </div>
+      <div class="col-sm-6 form-group">
+        <label for="address-1">First Name</label>
+       <input type="text" class="form-control" placeholder="Please Enter First Name">
+      </div>
+      <div class="col-sm-6 form-group">
+        <label for="address-2">Last Name</label>
+        <input type="text" class="form-control" placeholder="Please Enter Last Name">
+      </div>
+      <div class="col-sm-4 form-group">
+        <label for="State">Email</label>
+       <input type="text" class="form-control" placeholder="Please Enter Email">
+      </div>
+      <div class="col-sm-2 form-group">
+        <label for="zip">Mobile No</label>
+       <input type="text" class="form-control" placeholder="Please Enter Mobile No">
+      </div>
+
+      <div class="col-sm-12 Whatsapp_label">
+        <input type="checkbox" class="form-check d-inline" id="chb" required><label for="chb" class="form-check-label mx-2"> Whatsapp Number same as Mobile Number
+        </label>
+      </div>
+            <div class="col-sm-6 form-group">
+        <label for="zip">WhatsApp No</label>
+       <input type="text" class="form-control" placeholder="Please Enter WhatsApp No">
+      </div>
+
+      <div class="col-sm-12 form-group mb-0">
+        <button class="btn btn-primary float-right">Submit</button>
+      </div>
+
+    </div>
+  </form>
+</div>
  
    </body>
 </html>

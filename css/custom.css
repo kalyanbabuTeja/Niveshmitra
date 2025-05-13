@@ -213,8 +213,11 @@ background: linear-gradient(90deg, rgb(237 19 124) 0%, rgb(237 19 124) 31%, rgb(
 }
 label:not(.form-check-label):not(.custom-file-label){
     color: #2b2d2e;
-    font-weight: normal;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 13px;
+}
+.form-control{
+    border-radius: 10px;
 }
 select .form-control option{
     color:#6e7276;
@@ -222,8 +225,8 @@ select .form-control option{
 .text-blue{
     color: #007bff;
 }
-.form-control{
-    color:#6e7276;
+.form-control {
+    color: #bab6b6;
     font-size: 14px;
 }
 @media (min-width: 1200px) {

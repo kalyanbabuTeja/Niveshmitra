@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nivesh Mitra | Dashboard</title>
+    <link rel="stylesheet" href="css/fonts">
+    <link rel="stylesheet" href="css/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="css/adminlte.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/freestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <style>
+        body {
+            font-family: Noto Sans Regular;
+            background: #f5f5f5;
+        }
+
+        .progress-bar {
+            display: flex !important;
+            margin: 0 auto 20px !important;
+            flex-direction: row;
+            background: transparent !important;
+        }
+
+        .step {
+            flex: 1;
+            padding: 12px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+            clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%, 10% 50%);
+            margin-right: 5px;
+            background-color: #ccc;
+            transition: background-color 0.3s ease;
+        }
+
+        .step:last-child {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 10% 50%);
+        }
+
+        .step.active {
+            background-color: #1e40af;
+        }
+
+        .step.completed {
+            background-color: #2196f3;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: white;
+            border-radius: 6px;
+            margin: 0 auto;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .form-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #1e40af;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[disabled] {
+            background-color: #aaa;
+            cursor: not-allowed;
+        }
+
+        .header-card {
+            background: #1e40af;
+        }
+        .content-wrapper {
+    background: transparent !important;
+    background-size: cover;
+    background-position: left;
+}
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Tab Contents -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="index.html" class="brand-link p-0 pt-1">
+                    <div class="logo_sec">
+                        <img src="images/logo1.png" alt="logo.png" class="">
+                    </div>
+                </a>
+            </li>
+            <!-- <li class="nav-item d-none d-sm-inline-block">
+                  <a href="index3.html" class="nav-link">(Single Window System, Government of Uttar Pradesh)</a>
+                  </li> -->
+            <!-- <li class="nav-item d-none d-sm-inline-block">
+                  <a href="#" class="nav-link">&nbsp;</a>
+                  </li> -->
+        </ul>
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+            <!-- Navbar Search -->
+            <li class="nav-item">
+                <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                    <i class="fas fa-search"></i>
+                </a>
+                <div class="navbar-search-block" style="display: none;">
+                    <form class="form-inline">
+                        <div class="input-group input-group-sm">
+                            <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-navbar" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </li>
+            <!-- Messages Dropdown Menu -->
+            <li class="nav-item">
+                <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" role="button">
+                    <i class="fi fi-rr-exit"></i> Logout
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- /.navbar -->
+    <nav class="main-header navbar navbar-expand-md navbar-light navbar-white p-0">
+        <div class="container-fluid">
+            <!-- index.html -->
+            <div class="menubarnm">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="Dashboard.html"><i class="fi fi-rr-home"></i> Dashboard</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="#"><i class="fi fi-rr-layers"></i> Industry Registration</a>
+                        </li> -->
+                    <li class="nav-item dropdown">
+                        <a href="#"><i class="fi fi-rr-browser"></i>Pre-Establishment ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Quesstionniare_cfe.html">Questionnaire</a></li>
+                            <li><a href="#">Combined Application Form</a></li>
+                            <li><a href="#">Respond To Query</a></li>
+                            <li><a class="dropdown-item" href="#">Print CFE </a></li>
+                            <li><a href="#">Print Acknowledgment </a></li>
+                            <li><a href="#">Track Your Application </a></li>
+                            <li><a href="#">Duplicate Receipt </a></li>
+                            <!-- <li class="dropdown-submenu">
+                              <a href="#">Marketing ▸</a>
+                              <ul class="inner-dropdown">
+                                <li><a href="#">Combined Application Form</a></li>
+                                <li><a href="#">Social Media</a></li>
+                                <li><a href="#">Email Marketing</a></li>
+                              </ul>
+                              </li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#"><i class="fi fi-rr-layers"></i> CFO ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Questionnaire</a></li>
+                            <li><a href="#">Combined Application Form</a></li>
+                            <li><a href="#">Respond To Query</a></li>
+                            <li><a class="dropdown-item" href="#">Print CFE </a></li>
+                            <li><a href="#">Print Acknowledgment </a></li>
+                            <li><a href="#">Track Your Application </a></li>
+                            <li><a href="#">Duplicate Receipt </a></li>
+                            <!-- <li class="dropdown-submenu">
+                              <a href="#">Marketing ▸</a>
+                              <ul class="inner-dropdown">
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">Social Media</a></li>
+                                <li><a href="#">Email Marketing</a></li>
+                              </ul>
+                              </li> -->
+                            <li><a href="#">Consulting</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#"><i class="fi fi-rr-envelope"></i> Renewals ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Renewals</a></li>
+                            <li><a href="#">Renewals DashBoard</a></li>
+                            <!-- <li class="dropdown-submenu">
+                              <a href="#">Marketing ▸</a>
+                              <ul class="inner-dropdown">
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">Social Media</a></li>
+                                <li><a href="#">Email Marketing</a></li>
+                              </ul>
+                              </li> -->
+                            <li><a href="#">Print Acknowledgment</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fi fi-rr-comments"></i> Grievance</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#"><i class="fi fi-rr-bank"></i> Payment Services ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Payment Status</a></li>
+                            <li><a href="#">Payment History</a></li>
+                            <!-- <li class="dropdown-submenu">
+                              <a href="#">Marketing ▸</a>
+                              <ul class="inner-dropdown">
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">Social Media</a></li>
+                                <li><a href="#">Email Marketing</a></li>
+                              </ul>
+                              </li> -->
+                            <li><a href="#">Payment Print</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fi fi-rr-exclamation"></i> Other Services</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Right navbar links -->
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-8">
+                        <h1 class="m-0 fnt_b_18 text-end">Entrepreneur Details</h1>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-sm-4">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Dahboard</a></li>
+                            <li class="breadcrumb-item active">Application From</li>
+                        </ol>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <div class="container">
+            <div class="progress-bar">
+                <div class="step">Basic Details</div>
+                <div class="step">Communication Address</div>
+                <div class="step">Project Details(New Investmen)</div>
+                <div class="step">Employment Details</div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="tab-content active" id="tab-0">
+                <div class="card direct-chat direct-chat-primary px-0">
+                    <div class="card-header ui-sortable-handle header-card" style="cursor: move;">
+                        <h3 class="card-title text-white">Basic Details</h3>
+                        <div class="card-tools text-white">
+                            <button type="button" class="btn btn-tool text-white" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body p-3">
+                        <!-- Conversations are loaded here -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-form-label"> Name of Industrial
+                                        Undertaking</label>
+                                    <div class="col-lg-12">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-form-label">
+                                        Name of Promoter</label>
+                                    <div class="col-lg-12">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-form-label">
+                                        S/o.D/o.W/o</label>
+                                    <div class="col-lg-12">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="tab-1">
+                <div class="card direct-chat direct-chat-primary">
+                    <div class="card-header ui-sortable-handle header-card" style="cursor: move;">
+                        <h3 class="card-title text-white">Communication Address</h3>
+                        <div class="card-tools ">
+                            <button type="button" class="btn btn-tool text-white" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body p-3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <label class="col-form-label"> State</label>
+                                            <div class="col-lg-12 ">
+                                                <select id="7655" attrsearch="" name="7655" tabindex="48"
+                                                    class="form-control" data-displang=""
+                                                    data-datatype="custLGDHierarchy" data-groupno="61" required="true">
+                                                    <option value="" autocomplete="off">
+                                                        Please Select
+                                                    </option>
+                                                    <option value="35" autocomplete="off">ANDAMAN AND NICOBAR ISLANDS
+                                                    </option>
+                                                    <option value="28" autocomplete="off">ANDHRA PRADESH</option>
+                                                    <option value="12" autocomplete="off">ARUNACHAL PRADESH</option>
+                                                    <option value="18" autocomplete="off">ASSAM</option>
+                                                    <option value="10" autocomplete="off">BIHAR</option>
+                                                    <option value="4" autocomplete="off">CHANDIGARH</option>
+                                                    <option value="22" autocomplete="off">CHHATTISGARH</option>
+                                                    <option value="26" autocomplete="off">DADRA AND NAGAR HAVELI
+                                                    </option>
+                                                    <option value="25" autocomplete="off">DAMAN AND DIU</option>
+                                                    <option value="7" autocomplete="off">DELHI</option>
+                                                    <option value="30" autocomplete="off">GOA</option>
+                                                    <option value="24" autocomplete="off">GUJARAT</option>
+                                                    <option value="6" autocomplete="off">HARYANA</option>
+                                                    <option value="2" autocomplete="off">HIMACHAL PRADESH</option>
+                                                    <option value="1" autocomplete="off">JAMMU AND KASHMIR</option>
+                                                    <option value="20" autocomplete="off">JHARKHAND</option>
+                                                    <option value="29" autocomplete="off">KARNATAKA</option>
+                                                    <option value="32" autocomplete="off">KERALA</option>
+                                                    <option value="31" autocomplete="off">LAKSHADWEEP</option>
+                                                    <option value="23" autocomplete="off">MADHYA PRADESH</option>
+                                                    <option value="27" autocomplete="off">MAHARASHTRA</option>
+                                                    <option value="14" autocomplete="off">MANIPUR</option>
+                                                    <option value="17" autocomplete="off">MEGHALAYA</option>
+                                                    <option value="15" autocomplete="off">MIZORAM</option>
+                                                    <option value="13" autocomplete="off">NAGALAND</option>
+                                                    <option value="21" autocomplete="off">ODISHA</option>
+                                                    <option value="34" autocomplete="off">PUDUCHERRY</option>
+                                                    <option value="3" autocomplete="off">PUNJAB</option>
+                                                    <option value="8" autocomplete="off">RAJASTHAN</option>
+                                                    <option value="11" autocomplete="off">SIKKIM</option>
+                                                    <option value="33" autocomplete="off">TAMIL NADU</option>
+                                                    <option value="36" autocomplete="off">TELANGANA</option>
+                                                    <option value="16" autocomplete="off">TRIPURA</option>
+                                                    <option value="5" autocomplete="off">UTTARAKHAND</option>
+                                                    <option value="9" autocomplete="off">UTTAR PRADESH</option>
+                                                    <option value="19" autocomplete="off">WEST BENGAL</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <label class="col-form-label"> District</label>
+                                            <div class="col-lg-12">
+                                                <select id="7660" attrsearch="" name="7660" tabindex="49"
+                                                    class="form-control" data-displang="E"
+                                                    data-datatype="custLGDHierarchy" data-groupno="62" required="true">
+                                                    <option value="" autocomplete="off">
+                                                        Please Select
+                                                    </option>
+                                                    <option value="740" data-entity-level="null">EASTERN WEST KHASI
+                                                        HILLS
+                                                    </option>
+                                                    <option value="273" data-entity-level="null">EAST GARO HILLS
+                                                    </option>
+                                                    <option value="657" data-entity-level="null">EAST JAINTIA HILLS
+                                                    </option>
+                                                    <option value="274" data-entity-level="null">EAST KHASI HILLS
+                                                    </option>
+                                                    <option value="656" data-entity-level="null">NORTH GARO HILLS
+                                                    </option>
+                                                    <option value="276" data-entity-level="null">RI BHOI</option>
+                                                    <option value="277" data-entity-level="null">SOUTH GARO HILLS
+                                                    </option>
+                                                    <option value="663" data-entity-level="null">SOUTH WEST GARO HILLS
+                                                    </option>
+                                                    <option value="658" data-entity-level="null">SOUTH WEST KHASI HILLS
+                                                    </option>
+                                                    <option value="278" data-entity-level="null">WEST GARO HILLS
+                                                    </option>
+                                                    <option value="275" data-entity-level="null">WEST JAINTIA HILLS
+                                                    </option>
+                                                    <option value="279" data-entity-level="null">WEST KHASI HILLS
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <label class="col-form-label">Block</label>
+                                            <div class="col-lg-12">
+                                                <select id="7660" attrsearch="" name="7660" tabindex="49"
+                                                    class="form-control" data-displang="E"
+                                                    data-datatype="custLGDHierarchy" data-groupno="62" required="true">
+                                                    <option value="" autocomplete="off">
+                                                        Please Select
+                                                    </option>
+                                                    <option value="740" data-entity-level="null">EASTERN WEST KHASI
+                                                        HILLS
+                                                    </option>
+                                                    <option value="273" data-entity-level="null">EAST GARO HILLS
+                                                    </option>
+                                                    <option value="657" data-entity-level="null">EAST JAINTIA HILLS
+                                                    </option>
+                                                    <option value="274" data-entity-level="null">EAST KHASI HILLS
+                                                    </option>
+                                                    <option value="656" data-entity-level="null">NORTH GARO HILLS
+                                                    </option>
+                                                    <option value="276" data-entity-level="null">RI BHOI</option>
+                                                    <option value="277" data-entity-level="null">SOUTH GARO HILLS
+                                                    </option>
+                                                    <option value="663" data-entity-level="null">SOUTH WEST GARO HILLS
+                                                    </option>
+                                                    <option value="658" data-entity-level="null">SOUTH WEST KHASI HILLS
+                                                    </option>
+                                                    <option value="278" data-entity-level="null">WEST GARO HILLS
+                                                    </option>
+                                                    <option value="275" data-entity-level="null">WEST JAINTIA HILLS
+                                                    </option>
+                                                    <option value="279" data-entity-level="null">WEST KHASI HILLS
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 d-flex">
+
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label">Village/Town</label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select class="select form-control select2-hidden-accessible"
+                                                        tabindex="-1" aria-hidden="true">
+                                                        <option>Select Village/Town</option>
+                                                        <option value="1">-</option>
+                                                        <option value="2">-</option>
+                                                        <option value="2">-</option>
+                                                        <option value="2">-</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label">Address</label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label">Address</label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 d-flex" id="padding">
+
+                                        <!-- <div class="col-md-6">
+                                    <div class="form-group row">
+                                      <label class="col-lg-6 col-form-label">9. Door No</label>
+                                      <div class="col-lg-6 d-flex">
+                                        <input type="text" class="form-control">
+                                      </div>
+                                    </div>
+                                    </div> -->
+                                    </div>
+                                    <div class="col-md-12 d-flex" id="padding">
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label">Pincode</label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label"> Mobile No</label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label">Alternative Mobile
+                                                    No*</label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-12 d-flex" id="padding">
+
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label">Email</label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label"> Type of
+                                                    Organization*</label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select name="ctl00$ContentPlaceHolder1$ddlType"
+                                                        id="ctl00_ContentPlaceHolder1_ddlType" disabled="disabled"
+                                                        tabindex="1" class="form-control">
+                                                        <option value="--Select--">--Select--</option>
+                                                        <option value="1">Proprietary</option>
+                                                        <option selected="selected" value="2">Partnership</option>
+                                                        <option value="3">PVT LTD</option>
+                                                        <option value="4">Public Limited</option>
+                                                        <option value="5">Co-Operative</option>
+                                                        <option value="6">LLP</option>
+                                                        <option value="7">Trust</option>
+                                                        <option value="8">PPP</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label">Tel No(Landline)(If
+                                                    available)</label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 d-flex" id="padding">
+
+
+                                    </div>
+                                    <div class="col-md-12 d-flex" id="padding">
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label">Proposal For*</label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select name="ctl00$ContentPlaceHolder1$ddlproposal"
+                                                        id="ctl00_ContentPlaceHolder1_ddlproposal" disabled="disabled"
+                                                        tabindex="1" class="form-control">
+                                                        <option value="--Select--">--Select--</option>
+                                                        <option selected="selected" value="1">New</option>
+                                                        <option value="2">Expansion</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label"> Social Status</label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select name="ctl00$ContentPlaceHolder1$ddlCaste"
+                                                        id="ctl00_ContentPlaceHolder1_ddlCaste" tabindex="1"
+                                                        class="form-control">
+                                                        <option value="--Select--">--Select--</option>
+                                                        <option value="1">OC</option>
+                                                        <option selected="selected" value="2">OBC</option>
+                                                        <option value="3">SC</option>
+                                                        <option value="4">ST</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label">Differently
+                                                    Abled*</label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select name="ctl00$ContentPlaceHolder1$ddlDifferentlyabled"
+                                                        id="ctl00_ContentPlaceHolder1_ddlDifferentlyabled" tabindex="1"
+                                                        class="form-control">
+                                                        <option value="--Select--">--Select--</option>
+                                                        <option selected="selected" value="Yes">Yes</option>
+                                                        <option value="No">No</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 d-flex" id="padding">
+
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label">Women
+                                                    Entrepreneur</label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select name="ctl00$ContentPlaceHolder1$ddlWomenEnterprenuer"
+                                                        id="ctl00_ContentPlaceHolder1_ddlWomenEnterprenuer" tabindex="1"
+                                                        class="form-control">
+                                                        <option value="--Select--">--Select--</option>
+                                                        <option selected="selected" value="Yes">Yes</option>
+                                                        <option value="No">No</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label">Minority*</label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select name="ctl00$ContentPlaceHolder1$ddlMinority"
+                                                        id="ctl00_ContentPlaceHolder1_ddlMinority" tabindex="1"
+                                                        class="form-control">
+                                                        <option value="--Select--">--Select--</option>
+                                                        <option selected="selected" value="Yes">Yes</option>
+                                                        <option value="No">No</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--/.direct-chat-messages-->
+                                    <!-- Contacts are loaded here -->
+                                    <!-- /.direct-chat-pane -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                    <!-- /.card-footer-->
+                </div>
+            </div>
+            <div class="tab-content" id="tab-2">
+                <div class="card direct-chat direct-chat-primary">
+                    <div class="card-header ui-sortable-handle header-card" style="cursor: move;">
+                        <h3 class="card-title text-white">Project Details(New Investmen)</h3>
+                        <div class="card-tools text-white">
+                            <button type="button" class="btn btn-tool text-white" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <!-- Conversations are loaded here -->
+                        <div class="col-md-12 d-flex mt-3" id="padding">
+                            <div class="col-md-3">
+                                <div class="form-group row">
+                                    <label class="col-form-label"> Land Value(in
+                                        Lakhs)*</label>
+                                    <div class="col-lg-12 d-flex">
+                                        <input type="text" class="form-control" value="200.00" disabled="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group row">
+                                    <label class="col-form-label"> Building Value(in
+                                        Lakhs)*</label>
+                                    <div class="col-lg-12 d-flex">
+                                        <input type="text" class="form-control" value="350.00" disabled="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group row">
+                                    <label class="col-form-label"> Plant and Machinery
+                                        Value(in Lakhs) *</label>
+                                    <div class="col-lg-12 d-flex">
+                                        <input type="text" class="form-control" value="500.00" disabled="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group row">
+                                    <label class="col-form-label"> Total Value(in
+                                        Lakhs)*</label>
+                                    <div class="col-lg-12 d-flex">
+                                        <input type="text" class="form-control" value="1050.00" disabled="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 d-flex" id="padding">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="tab-3">
+                <h3>Employment Details</h3>
+                <p>This is step 4 content.</p>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="form-buttons">
+                <button onclick="prevStep()" id="backBtn">Back</button>
+                <button onclick="nextStep()" id="nextBtn">Next</button>
+            </div>
+        </div>
+
+        <script>
+            let currentStep = 0;
+            const steps = document.querySelectorAll('.step');
+            const tabs = document.querySelectorAll('.tab-content');
+            const backBtn = document.getElementById('backBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            function updateUI() {
+                steps.forEach((step, index) => {
+                    step.classList.remove('active', 'completed');
+                    if (index < currentStep) step.classList.add('completed');
+                    if (index === currentStep) step.classList.add('active');
+                });
+
+                tabs.forEach((tab, index) => {
+                    tab.classList.toggle('active', index === currentStep);
+                });
+
+                backBtn.disabled = currentStep === 0;
+                nextBtn.textContent = currentStep === steps.length - 1 ? 'Finish' : 'Next';
+            }
+
+            function nextStep() {
+                if (currentStep < steps.length - 1) {
+                    currentStep++;
+                    updateUI();
+                } else {
+                    alert("Form submitted!");
+                }
+            }
+
+            function prevStep() {
+                if (currentStep > 0) {
+                    currentStep--;
+                    updateUI();
+                }
+            }
+
+            updateUI();
+        </script>
+
+</body>
+
+</html>
