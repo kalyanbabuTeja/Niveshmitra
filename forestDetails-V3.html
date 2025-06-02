@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nivesh Mitra | Dashboard</title>
+    <link rel="stylesheet" href="css/fonts">
+    <link rel="stylesheet" href="css/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="css/adminlte.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/freestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <!-- Preloader -->
+
+        <!-- Navbar -->
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__shake" src="images/logo.png" alt="logo.png" height="60" width="60">
+        </div>
+
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="brand-link p-0 pt-1">
+                        <div class="logo_sec">
+                            <img src="images/investup.png" alt="investup" class="">
+                        </div>
+                    </a>
+                </li>
+                <!-- <li class="nav-item d-none d-sm-inline-block">
+                <a href="index3.html" class="nav-link">(Single Window System, Government of Uttar Pradesh)</a>
+              </li> -->
+                <!-- <li class="nav-item d-none d-sm-inline-block">
+                <a href="#" class="nav-link">&nbsp;</a>
+              </li> -->
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="navbar-search-block" style="display: none;">
+                        <form class="form-inline">
+                            <div class="input-group input-group-sm">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-navbar" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+
+                <!-- Messages Dropdown Menu -->
+
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" role="button">
+                        <i class="fi fi-rr-exit"></i> Logout
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="main-header navbar navbar-expand-md navbar-light navbar-white p-0">
+            <div class="container-fluid">
+
+
+                <!-- index.html -->
+                <div class="menubarnm">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="Dashboard.html"><i class="fi fi-rr-home"></i> Dashboard</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                <a href="#"><i class="fi fi-rr-layers"></i> Industry Registration</a>
+              </li> -->
+                        <li class="nav-item dropdown">
+                            <a href="#"><i class="fi fi-rr-browser"></i>Pre-Establishment ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Quesstionniare_cfe.html">Questionnaire</a></li>
+                                <li><a href="redesigned_questionnaire.html">Questionnaire Form </a> </li>
+                                <li><a href="#">Combined Application Form</a></li>
+                                <li><a href="#">Respond To Query</a></li>
+                                <li><a class="dropdown-item" href="#">Print CFE </a></li>
+                                <li><a href="">Print Acknowledgment </a></li>
+                                <li><a href="#">Track Your Application </a></li>
+                                <li><a href="#">Duplicate Receipt </a></li>
+                                <!-- <li class="dropdown-submenu">
+                    <a href="#">Marketing ▸</a>
+                    <ul class="inner-dropdown">
+                      <li><a href="#">Combined Application Form</a></li>
+                      <li><a href="#">Social Media</a></li>
+                      <li><a href="#">Email Marketing</a></li>
+                    </ul>
+                  </li> -->
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#"><i class="fi fi-rr-layers"></i> CFO ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Questionnaire</a></li>
+                                <li><a href="#">Combined Application Form</a></li>
+                                <li><a href="#">Respond To Query</a></li>
+                                <li><a class="dropdown-item" href="#">Print CFE </a></li>
+                                <li><a href="#">Print Acknowledgment </a></li>
+                                <li><a href="#">Track Your Application </a></li>
+                                <li><a href="#">Duplicate Receipt </a></li>
+                                <!-- <li class="dropdown-submenu">
+                    <a href="#">Marketing ▸</a>
+                    <ul class="inner-dropdown">
+                      <li><a href="#">SEO</a></li>
+                      <li><a href="#">Social Media</a></li>
+                      <li><a href="#">Email Marketing</a></li>
+                    </ul>
+                  </li> -->
+                                <li><a href="#">Consulting</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#"><i class="fi fi-rr-envelope"></i> Renewals ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Renewals</a></li>
+                                <li><a href="#">Renewals DashBoard</a></li>
+                                <!-- <li class="dropdown-submenu">
+                    <a href="#">Marketing ▸</a>
+                    <ul class="inner-dropdown">
+                      <li><a href="#">SEO</a></li>
+                      <li><a href="#">Social Media</a></li>
+                      <li><a href="#">Email Marketing</a></li>
+                    </ul>
+                  </li> -->
+                                <li><a href="#">Print Acknowledgment</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#"><i class="fi fi-rr-comments"></i> Grievance</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#"><i class="fi fi-rr-bank"></i> Payment Services ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Payment Status</a></li>
+                                <li><a href="#">Payment History</a></li>
+                                <!-- <li class="dropdown-submenu">
+                    <a href="#">Marketing ▸</a>
+                    <ul class="inner-dropdown">
+                      <li><a href="#">SEO</a></li>
+                      <li><a href="#">Social Media</a></li>
+                      <li><a href="#">Email Marketing</a></li>
+                    </ul>
+                  </li> -->
+                                <li><a href="#">Payment Print</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#"><i class="fi fi-rr-exclamation"></i> Other Services</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+
+                <!-- Right navbar links -->
+
+            </div>
+        </nav>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <!-- <div class="content-header"> -->
+            <!-- <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Entrepreneur Details</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Dahboard</a></li>
+                                <li class="breadcrumb-item active">Application From</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div> -->
+            <!-- </div> -->
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <!-- Small boxes (Stat box) -->
+                    <div class="row">
+
+
+
+                        <div class="card direct-chat direct-chat-primary px-0 shadow-none border-0">
+                            <div class="card-header ui-sortable-handle header-card" style="cursor: move;">
+                                <h3 class="card-title text-white">Forest Details</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body p-3">
+                                <!-- Conversations are loaded here -->
+                                <div class="row">
+                                    <div class="card-header ui-sortable-handle" style="cursor: move;">
+                                        <h3 class="card-title semi_heading">1. Forest Requirement</h3>
+                                    </div>
+                                    <div class="col-md-12 d-flex mt-3" id="padding">
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label" data-tooltip="Species"
+                                                class="tooltip" data-tooltip-location="bottom">1. Species<span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label" data-tooltip="Estimated Length Of Timber (in Meters)"
+                                                class="tooltip" data-tooltip-location="bottom">2. Estimated Length Of Timber (in
+                                                    Meters)<span class="text-danger">*</span></label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label" data-tooltip="Estimated Volume Of Timber (in Meters)"
+                                                class="tooltip" data-tooltip-location="bottom">3. Estimated Volume Of Timber (in
+                                                    Meters)<span class="text-danger">*</span></label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 d-flex" id="padding">
+
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label" data-tooltip="Girth (in Meters)"
+                                                class="tooltip" data-tooltip-location="bottom">4. Girth (in Meters)<span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label" data-tooltip="Estimated Firewood/Rootwood/Faggot"
+                                                class="tooltip" data-tooltip-location="bottom">5. Estimated
+                                                    Firewood/Rootwood/Faggot<span class="text-danger">*</span>
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label" data-tooltip="No. of Pole's"
+                                                class="tooltip" data-tooltip-location="bottom">6. No. of Pole's<span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn btn-successgreen btn-sm mb-3">Add
+                                                New</button>
+                                            <button type="button"
+                                                class="btn btn-danger btn-sm mb-3 float-right">Cancle</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-12 mb-3">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Actions</th>
+                                                        <th>Species</th>
+                                                        <th>Timber Length</th>
+                                                        <th>Timber Volume</th>
+                                                        <th>Timber Girth</th>
+                                                        <th>Estimated Firewood</th>
+                                                        <th>pole</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a data-toggle="modal" href="#delete_modal"
+                                                                class="btn btn-sm bg-danger-light">
+                                                                <i class="fe fe-trash"></i> Delete
+                                                            </a></td>
+                                                        <td>Neem</td>
+                                                        <td>10</td>
+                                                        <td>100</td>
+                                                        <td>10</td>
+                                                        <td>10</td>
+                                                        <td>5</td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="card direct-chat direct-chat-primary px-0 shadow-none border-0">
+                                        <div class="card-header ui-sortable-handle" style="cursor: move;">
+                                            <h3 class="card-title semi_heading">2. Boundary Description</h3>
+
+
+                                        </div>
+                                        <!-- /.card-header -->
+                                        <div class="card-body">
+                                            <div class="col-md-12 d-flex mt-3" id="padding">
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label" data-tooltip="North"
+                                                class="tooltip" data-tooltip-location="bottom">1- North<span
+                                                                class="text-danger">*</span></label>
+                                                        <div class="col-lg-12 d-flex">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label" data-tooltip="East"
+                                                class="tooltip" data-tooltip-location="bottom">2- East<span
+                                                                class="text-danger">*</span></label>
+                                                        <div class="col-lg-12 d-flex">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label" data-tooltip="West"
+                                                class="tooltip" data-tooltip-location="bottom">3- West<span
+                                                                class="text-danger">*</span></label>
+                                                        <div class="col-lg-12 d-flex">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="col-md-12 d-flex mt-3" id="padding">
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label" data-tooltip="South"
+                                                class="tooltip" data-tooltip-location="bottom">4- South<span
+                                                                class="text-danger">*</span></label>
+                                                        <div class="col-lg-12 d-flex">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-12 d-flex" id="padding">
+                                                <!-- <div class="col-md-6">
+                                       <div class="form-group row">
+                                         <label class="col-lg-6 col-form-label">9. Door No</label>
+                                         <div class="col-lg-6 d-flex">
+                                           <input type="text" class="form-control">
+                                         </div>
+                                       </div>
+                                       </div> -->
+                                            </div>
+
+                                        </div>
+                                        <!-- /.card-body -->
+
+                                        <!-- /.card-footer-->
+                                    </div>
+
+                                    <div class="card direct-chat direct-chat-primary shadow-none border-0 px-0">
+                                        <div class="card-header ui-sortable-handle" style="cursor: move;">
+                                            <h3 class="card-title semi_heading">3. Land Details</h3>
+                                        </div>
+                                        <!-- /.card-header -->
+                                        <div class="card-body">
+                                            <!-- Conversations are loaded here -->
+                                            <div class="col-md-12 d-flex mt-3" id="padding">
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label" data-tooltip="Area of Land in Ha"
+                                                class="tooltip" data-tooltip-location="bottom">Area of Land <br>in Ha<span
+                                                                class="text-danger">*</span></label>
+                                                        <div class="col-lg-12 d-flex">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label" data-tooltip="Purpose Non-Forest land Certificate"
+                                                class="tooltip" data-tooltip-location="bottom">Purpose Non-Forest <br> land
+                                                            Certificate sought <span
+                                                                class="text-danger">*</span></label>
+                                                        <div class="col-lg-12 d-flex">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-lg-12 col-form-label" data-tooltip="Location and address in respect of which certificate from forest department is sought"
+                                                class="tooltip" data-tooltip-location="bottom">Location and address of
+                                                            land
+                                                            in respect of
+                                                            which certificate from forest department is sought</label>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 d-flex" id="padding">
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label" data-tooltip="Same as the above address"
+                                                class="tooltip" data-tooltip-location="bottom">Same as the above address</label>
+                                                        <div class="col-lg-12 d-flex ml-4">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="invalidCheck2" required="">
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label"  data-tooltip="Location and Full Address of Land"
+                                                class="tooltip" data-tooltip-location="bottom">Location and Full Address of
+                                                            Land<span class="text-danger">*</span></label>
+                                                        <div class="col-lg-12 d-flex">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label" data-tooltip="State (L)"
+                                                class="tooltip" data-tooltip-location="bottom">State (L) <span
+                                                                class="text-danger">*</span></label>
+                                                        <div class="col-lg-12 d-flex">
+                                                            <select id="1998" attrsearch="" name="1998" tabindex="23"
+                                                                class="form-control" data-datatype="custLGDHierarchy"
+                                                                data-groupno="75" required="true"
+                                                                fdprocessedid="xztb7c">
+                                                                <option value="" autocomplete="off">
+                                                                    Please Select</option>
+                                                                <option value="35" autocomplete="off">ANDAMAN AND
+                                                                    NICOBAR
+                                                                    ISLANDS</option>
+                                                                <option value="28" autocomplete="off">ANDHRA PRADESH
+                                                                </option>
+                                                                <option value="12" autocomplete="off">ARUNACHAL PRADESH
+                                                                </option>
+                                                                <option value="18" autocomplete="off">ASSAM</option>
+                                                                <option value="10" autocomplete="off">BIHAR</option>
+                                                                <option value="4" autocomplete="off">CHANDIGARH</option>
+                                                                <option value="22" autocomplete="off">CHHATTISGARH
+                                                                </option>
+                                                                <option value="26" autocomplete="off">DADRA AND NAGAR
+                                                                    HAVELI
+                                                                </option>
+                                                                <option value="25" autocomplete="off">DAMAN AND DIU
+                                                                </option>
+                                                                <option value="7" autocomplete="off">DELHI</option>
+                                                                <option value="30" autocomplete="off">GOA</option>
+                                                                <option value="24" autocomplete="off">GUJARAT</option>
+                                                                <option value="6" autocomplete="off">HARYANA</option>
+                                                                <option value="2" autocomplete="off">HIMACHAL PRADESH
+                                                                </option>
+                                                                <option value="1" autocomplete="off">JAMMU AND KASHMIR
+                                                                </option>
+                                                                <option value="20" autocomplete="off">JHARKHAND</option>
+                                                                <option value="29" autocomplete="off">KARNATAKA</option>
+                                                                <option value="32" autocomplete="off">KERALA</option>
+                                                                <option value="31" autocomplete="off">LAKSHADWEEP
+                                                                </option>
+                                                                <option value="23" autocomplete="off">MADHYA PRADESH
+                                                                </option>
+                                                                <option value="27" autocomplete="off">MAHARASHTRA
+                                                                </option>
+                                                                <option value="14" autocomplete="off">MANIPUR</option>
+                                                                <option value="17" autocomplete="off">MEGHALAYA</option>
+                                                                <option value="15" autocomplete="off">MIZORAM</option>
+                                                                <option value="13" autocomplete="off">NAGALAND</option>
+                                                                <option value="21" autocomplete="off">ODISHA</option>
+                                                                <option value="34" autocomplete="off">PUDUCHERRY
+                                                                </option>
+                                                                <option value="3" autocomplete="off">PUNJAB</option>
+                                                                <option value="8" autocomplete="off">RAJASTHAN</option>
+                                                                <option value="11" autocomplete="off">SIKKIM</option>
+                                                                <option value="33" autocomplete="off">TAMIL NADU
+                                                                </option>
+                                                                <option value="36" autocomplete="off">TELANGANA</option>
+                                                                <option value="16" autocomplete="off">TRIPURA</option>
+                                                                <option value="5" autocomplete="off">UTTARAKHAND
+                                                                </option>
+                                                                <option value="9" autocomplete="off">UTTAR PRADESH
+                                                                </option>
+                                                                <option value="19" autocomplete="off">WEST BENGAL
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 d-flex" id="padding">
+
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label" data-tooltip="District (L)"
+                                                class="tooltip" data-tooltip-location="bottom">District (L)</label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select id="1999" attrsearch="" name="1999" tabindex="24"
+                                                        class="form-control" data-datatype="custLGDHierarchy"
+                                                        data-groupno="76" required="true" fdprocessedid="ajnsxd">
+                                                        <option value="" autocomplete="off">
+                                                            Please Select</option>
+                                                        <option value="740" data-entity-level="null">EASTERN WEST
+                                                            KHASI HILLS
+                                                        </option>
+                                                        <option value="273" data-entity-level="null">EAST GARO HILLS
+                                                        </option>
+                                                        <option value="657" data-entity-level="null">EAST JAINTIA
+                                                            HILLS</option>
+                                                        <option value="274" data-entity-level="null">EAST KHASI
+                                                            HILLS</option>
+                                                        <option value="656" data-entity-level="null">NORTH GARO
+                                                            HILLS</option>
+                                                        <option value="276" data-entity-level="null">RI BHOI
+                                                        </option>
+                                                        <option value="277" data-entity-level="null">SOUTH GARO
+                                                            HILLS</option>
+                                                        <option value="663" data-entity-level="null">SOUTH WEST GARO
+                                                            HILLS</option>
+                                                        <option value="658" data-entity-level="null">SOUTH WEST
+                                                            KHASI HILLS</option>
+                                                        <option value="278" data-entity-level="null">WEST GARO HILLS
+                                                        </option>
+                                                        <option value="275" data-entity-level="null">WEST JAINTIA
+                                                            HILLS</option>
+                                                        <option value="279" data-entity-level="null">WEST KHASI
+                                                            HILLS</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label" data-tooltip="Village/Town (L)"
+                                                class="tooltip" data-tooltip-location="bottom">Village/Town (L)<span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="form-control">
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label" data-tooltip="Pincode (L)"
+                                                class="tooltip" data-tooltip-location="bottom">Pincode (L) <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 d-flex" id="padding">
+                                        <div class="col-md-4">
+                                            <h6 class="card-title ml-4 mt-3 ml-0" style="
+    margin-left: 15px !important;
+">Geographic Co-ordinates and Land Description</h6>
+                                            <div class="form-group row" style="width: 100%;">
+                                                <label class="col-form-label" data-tooltip="Please enter the co-ordinates and description"
+                                                class="tooltip" data-tooltip-location="bottom">Please enter the co-ordinates and
+                                                    description<span class="text-danger">*</span></label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="form-control">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--/.direct-chat-messages-->
+
+                                    <!-- Contacts are loaded here -->
+
+                                    <!-- /.direct-chat-pane -->
+                                    <div class="card direct-chat  shadow-none border-0">
+                                        <div class="card-header ui-sortable-handle" style="cursor: move;">
+                                            <h3 class="card-title semi_heading">4. GPS Coordinates Details</h3>
+                                        </div>
+                                        <div class="card-body ">
+                                            <div class="col-md-12 d-flex mt-3">
+                                                <div class="col-md-4" id="padding">
+
+                                                    <div class="form-group row" style="width: 100%;">
+                                                        <label class="ml-2 col-form-label">1.Establishment Location
+                                                            Address
+                                                            For which
+                                                            application is being Done<span
+                                                                class="text-danger">*</span></label>
+                                                        <div class="col-lg-12 d-flex">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label">GPS Coordinates<span
+                                                                class="text-danger">*</span></label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 " id="padding">
+
+                                                    <div class="">
+                                                        <div class="form-group row">
+                                                            <label class="col-form-label">Latitude<span
+                                                                    class="text-danger">*</span></label>
+                                                            <div class="col-lg-2 d-flex">
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="gender" id="gender_male" value="option1"
+                                                                        checked="">
+                                                                    <label class="form-check-label" for="gender_male">
+                                                                        N
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="gender" id="gender_female"
+                                                                        value="option2">
+                                                                    <label class="form-check-label" for="gender_female">
+                                                                        S
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+
+                                            </div>
+                                            <div class="col-md-12 d-flex" id="padding">
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label">Degrees(L) <span
+                                                                class="text-danger">*</span></label>
+                                                        <div class="col-lg-12 d-flex">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label">Minutes(L) <span
+                                                                class="text-danger">*</span></label>
+                                                        <div class="col-lg-12 d-flex">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label">Seconds(L) <span
+                                                                class="text-danger">*</span></label>
+                                                        <div class="col-lg-12 d-flex">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-12 d-flex">
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label" data-tooltip="Latitude"
+                                                class="tooltip" data-tooltip-location="bottom">Latitude<span
+                                                                class="text-danger">*</span></label>
+                                                        <div class="col-lg-12 d-flex">
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="gender" id="gender_male" value="option1"
+                                                                    checked="">
+                                                                <label class="form-check-label" for="gender_male">
+                                                                    E
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="gender" id="gender_female" value="option2">
+                                                                <label class="form-check-label" for="gender_female">
+                                                                    W
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label" data-tooltip="Degrees"
+                                                class="tooltip" data-tooltip-location="bottom">Degrees <span class="text-danger">* </span></label>
+                                                        <div class="col-lg-12 d-flex">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label" data-tooltip="Minutes"
+                                                class="tooltip" data-tooltip-location="bottom">Minutes <span class="text-danger">* </span></label>
+                                                        <div class="col-lg-12 d-flex">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+
+                                <div class="col-md-12 d-flex text-center mt-1" id="padding">
+                                    <div class="col-md-3">
+                                        <a href="WaterDetails.html">
+                                            <button type="submit"
+                                                class="btn btn-rounded btn-success btn-lg">previous</button></a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="#basictab2"> <button type="submit"
+                                                class="btn btn-rounded btn-warning btn-lg"> Clear
+                                                all</button></a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="#basictab2"><button type="submit"
+                                                class="btn btn-rounded btn-primary btn-lg"> Save</button></a>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <a href="FireDetails.html">
+                                            <button type="submit"
+                                                class="btn btn-rounded btn-success btn-lg">Next</button></a>
+                                    </div>
+
+
+                                </div>
+                                <!-- /.card-footer-->
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- /.card-body -->
+
+                <!-- /.card-footer-->
+        </div>
+    </div>
+    </div>
+
+
+    <!-- /.card-footer-->
+    </div>
+    <!-- ./col -->
+    </div>
+    <!-- /.row -->
+    <!-- Main row -->
+
+    <!-- /.row (main row) -->
+    </div>
+    </section>
+    <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+        <!-- <strong>Copyright &copy; 2014-2021 <a href="#">Nivesh Mitra</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.2.0
+    </div> -->
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/adminlte.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js.map"></script>
+</body>
+
+</html>

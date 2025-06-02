@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nivesh Mitra | Dashboard</title>
+    <link rel="stylesheet" href="css/fonts">
+    <link rel="stylesheet" href="css/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="css/adminlte.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/freestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+</head>
+
+<body>
+    <header>
+                 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- <!-Left navbar links -->
+            <ul class="navbar-nav">
+               <li class="nav-item">
+                  <a href="index.html" class="brand-link p-0 pt-1">
+                     <div class="logo_sec">
+                        <img src="images/investup.png" alt="investup" class="">
+                     </div>
+                  </a>
+               </li>
+               <li class="nav-item d-none d-sm-inline-block">
+                  <a href="#" class="nav-link">&nbsp;</a>
+               </li>
+            </ul>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+               <!-- Navbar Search -->
+               <li class="nav-item">
+                  <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                  <i class="fas fa-search"></i>
+                  </a>
+                  <div class="navbar-search-block" style="display: none;">
+                     <form class="form-inline">
+                        <div class="input-group input-group-sm">
+                           <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                              aria-label="Search">
+                           <div class="input-group-append">
+                              <button class="btn btn-navbar" type="submit">
+                              <i class="fas fa-search"></i>
+                              </button>
+                              <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                              <i class="fas fa-times"></i>
+                              </button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </li>
+               <!-- Messages Dropdown Menu -->
+               <li class="nav-item">
+                  <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="index.html" role="button">
+                  <i class="fi fi-rr-exit"></i> Logout
+                  </a>
+               </li>
+            </ul>
+         </nav>
+      
+        <!-- /.navbar -->
+        <nav class="main-header navbar navbar-expand-md navbar-light navbar-white p-0">
+            <div class="container-fluid">
+                <!-- index.html -->
+                <div class="menubarnm">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="Dashboard.html"><i class="fi fi-rr-home"></i> Dashboard</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                        <a href="#"><i class="fi fi-rr-layers"></i> Industry Registration</a>
+                        </li> -->
+                        <li class="nav-item dropdown">
+                            <a href="#"><i class="fi fi-rr-browser"></i>Pre-Establishment ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Quesstionniare_cfe.html">Questionnaire</a></li>
+                                <li><a href="#">Combined Application Form</a></li>
+                                <li><a href="#">Respond To Query</a></li>
+                                <li><a class="dropdown-item" href="#">Print CFE </a></li>
+                                <li><a href="#">Print Acknowledgment </a></li>
+                                <li><a href="#">Track Your Application </a></li>
+                                <li><a href="#">Duplicate Receipt </a></li>
+                                <!-- <li class="dropdown-submenu">
+                              <a href="#">Marketing ▸</a>
+                              <ul class="inner-dropdown">
+                                <li><a href="#">Combined Application Form</a></li>
+                                <li><a href="#">Social Media</a></li>
+                                <li><a href="#">Email Marketing</a></li>
+                              </ul>
+                              </li> -->
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#"><i class="fi fi-rr-layers"></i> CFO ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Questionnaire</a></li>
+                                <li><a href="#">Combined Application Form</a></li>
+                                <li><a href="#">Respond To Query</a></li>
+                                <li><a class="dropdown-item" href="#">Print CFE </a></li>
+                                <li><a href="#">Print Acknowledgment </a></li>
+                                <li><a href="#">Track Your Application </a></li>
+                                <li><a href="#">Duplicate Receipt </a></li>
+                                <!-- <li class="dropdown-submenu">
+                              <a href="#">Marketing ▸</a>
+                              <ul class="inner-dropdown">
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">Social Media</a></li>
+                                <li><a href="#">Email Marketing</a></li>
+                              </ul>
+                              </li> -->
+                                <li><a href="#">Consulting</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#"><i class="fi fi-rr-envelope"></i> Renewals ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Renewals</a></li>
+                                <li><a href="#">Renewals DashBoard</a></li>
+                                <!-- <li class="dropdown-submenu">
+                              <a href="#">Marketing ▸</a>
+                              <ul class="inner-dropdown">
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">Social Media</a></li>
+                                <li><a href="#">Email Marketing</a></li>
+                              </ul>
+                              </li> -->
+                                <li><a href="#">Print Acknowledgment</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#"><i class="fi fi-rr-comments"></i> Grievance</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#"><i class="fi fi-rr-bank"></i> Payment Services ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Payment Status</a></li>
+                                <li><a href="#">Payment History</a></li>
+                                <!-- <li class="dropdown-submenu">
+                              <a href="#">Marketing ▸</a>
+                              <ul class="inner-dropdown">
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">Social Media</a></li>
+                                <li><a href="#">Email Marketing</a></li>
+                              </ul>
+                              </li> -->
+                                <li><a href="#">Payment Print</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#"><i class="fi fi-rr-exclamation"></i> Other Services</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Right navbar links -->
+            </div>
+        </nav>
+    </header>
+    <div class="content-wrapper">
+          <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="card my-5 py-3">
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-8">
+                        <h1 class="m-0 fnt_b_18 text-end">Line of Activity</h1>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-sm-4">
+                      <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Dahboard</a></li>
+              <li class="breadcrumb-item active">Application From</li>
+              <li class="breadcrumb-item active">LandDetails Form</li>
+            </ol>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <div class="container">
+            <div class="progress-bar">
+                <div class="step">1. Basic Details</div>
+                <div class="step">2. Line of Manufacture</div>
+                <div class="step">3. Raw Materials Used in Process</div>
+              
+            </div>
+        </div>
+        <div class="container">
+            <div class="tab-content active" id="tab-0">
+                <div class="card direct-chat direct-chat-primary px-0">
+                    <div class="card-header ui-sortable-handle header-card" style="cursor: move;">
+                        <h3 class="card-title text-white">Basic Details</h3>
+
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body p-3">
+                        <!-- Conversations are loaded here -->
+                        <div class="row">
+                           <div class="form-group row">
+                  <label class="col-form-label">Line of Activity*</label>
+                  <div class="col-lg-6">
+                    <select name="ctl00$ContentPlaceHolder1$ddlintLineofActivity" id="ctl00_ContentPlaceHolder1_ddlintLineofActivity" class="form-control">
+                      <option value="--Select--">--Select--</option>
+                      <option value="1047"> Block making of printing without foundry (excluding wooden block making) - White</option>
+                      <option value="1064"> Diesel pump repairing and servicing ( complete mechanical dry process) - White</option>
+                      <option value="1134"> Mineral stack yard / Railway sidings - Green</option>
+                      <option value="1101"> Polythene and plastic processed products manufacturing(Virgin Plastic) - Green</option>
+                      <option value="1106"> Ready mix cement concrete - Green</option>
+                      <option value="1171">Almirah,  Grill      Manufacturing (DryMechanical Process) - Orange</option>
+                      <option value="1172">Aluminium &amp; copper extraction from scrap  using  oil  fired  furnace  (dry process only) - Orange</option>
+                      <option value="1001">Aluminium Smelter - Red</option>
+                      <option value="1020">Aluminium utensils from aluminium circles by pressing only (dry mechanical operation) - Green</option>
+                      <option value="1002">Asbestos and asbestos basedindustries - Red</option>
+                      <option value="2363">Assembly of Aero-structures / Empennage - Orange</option>
+                      <option value="1025">Assembly of air coolers /conditioners ,repairing and servicing - White</option>
+                      <option value="1029">Assembly of bicycles ,baby carriages and other small non motorizing vehicles  - White</option>
+                      <option value="1350">Autoclave Aerated Concrete Blocks / Bricks with fuel consumption less than 12 TPD - Green</option>
+                      <option value="1338">Autoclave Aerated Concrete Blocks / Bricks with fuel consumption more than 12 TPD - Orange</option>
+                      <option value="1003">Automobile Manufacturing(integrated facilities) - Red</option>
+                      <option value="1173">Automobile servicing, repairing andpainting       (excluding only fuel dispensing) - Orange</option>
+                      <option value="1174">Ayurvedic and homeopathic medicine        - Orange</option>
+                      <option value="1034">Ayurvedic and homeopathic medicines (without boiler) - Green</option>
+                      <option value="1035">Bailing (hydraulic press)of waste papers - White</option>
+                      <option value="1038">Bakery /confectionery /sweets products (with production capacity less than 1 tpd (with gas or electrical oven) - Green</option>
+                      <option value="1175">Bakery and confectionery units with production capacity&gt; 1 TPD.  ( Withovens / furnaces) - Orange</option>
+                      <option value="1004">Basic chemicals and electrochemicals and its derivativesincluding manufacturing of acid - Red</option>
+                      <option value="1176">Bi-axially oriented PP film along with metalizing operations  - Green</option>
+                      <option value="1041">Bio fertilizer and bio-pesticides without using inorganic chemicals  - White</option>
+                      <option value="1043">Biomass briquettes (sun drying) without using toxic hazardous wastes - Green</option>
+                      <option value="1316">Biotechnology process without solvents - Orange</option>
+                      <option value="1044">Biscuits trays etc from rolled PVC sheet (using automatic vacuum forming machines) - White</option>
+                      <option value="1045">Blending and packing of tea - White</option>
+                      <option value="1046">Blending of mela mine resins &amp; different powder, additives by physical mixing - Green</option>
+                      <option value="1331">Bottling of Anhydrous Ammonia and Manufacture of Liquid Ammonia with Ammonia Storage of at least 60 T - Red</option>
+                      <option value="1048">Brass and bell metal utensils manufacturing from circles(dry mechanical operation without re-rolling facility)  - Green</option>
+                      <option value="1177">Brickfields  ( excluding fly ash brick manufacturing using lime process) - Orange</option>
+                      <option value="1049">Candy  - Green</option>
+                      <option value="1050">Cardboard or corrugated box and paper products (excluding paper or pulp manufacturing and without using boilers)  - Green</option>
+                      <option value="1051">Carpentry &amp; wooden furniture manufacturing (excluding saw mill) with the help of electrical (motorized) machines such  as electrical wood planner, steel saw cutting circular blade, etc - Green</option>
+                      <option value="1179">Cashew nut processing                                   - Orange</option>
+                      <option value="1006">Cement - Red</option>
+                      <option value="1052">Cement products (without using asbestos / boiler / steam curing) like pipe ,pillar, jafri, well ring, block/tiles etc.(should be done in closed covered shed to control fugitive emissions) - Green</option>
+                      <option value="1053">Ceramic colour manufacturing by mixing &amp; blending only (not using boiler and wastewater recycling process)  - Green</option>
+                      <option value="1005">Ceramics and Refractories - Orange</option>
+                      <option value="1054">Chalk making from plaster of Paris ( only casting without boilers etc. ( sun drying / electrical oven) - White</option>
+                      <option value="1180">Chanachur and ladoo from puffed and beaten  rice( murl  and shira) using husk fired oven - Orange</option>
+                      <option value="1055">Chilling plant and ice making without using ammonia - Green</option>
+                      <option value="1181">Chilling plant, cold storage and ice making  - Green</option>
+                      <option value="1007">Chlor Alkali - Red</option>
+                      <option value="1008">Chlorates, per-chlorates &amp;peroxides - Red</option>
+                      <option value="1009">Chlorine, fluorine, bromine,iodine and their compounds - Red</option>
+                      <option value="1059">CO2 recovery - Green</option>
+                      <option value="1010">Coal  washeries                                        - Orange</option>
+                      <option value="1056">Coated electrode manufacturing            - Orange</option>
+                      <option value="1347">Cob drying (fuel consumption less than 12 TPD) - Green</option>
+                      <option value="1336">Cob drying (fuel consumption more than 12 TPD) - Orange</option>
+                      <option value="1182">Coffee seed processing                                  - Orange</option>
+                      <option value="1183">Coke briquetting ( sun drying)  - Green</option>
+                      <option value="1012">Coke making, liquefaction, coal tar distillation or fuel gas making - Red</option>
+                      <option value="1013">Common Treatment and disposal facilities (CETP, TSDF, E- Waste recycling, CBMWTF,Effluent conveyance project, incinerators, Solvent/ Acid recovery plant, MSW sanitary landfill tes, STP) - Red</option>
+                      <option value="1057">Compact  disc  computer  floppy  and cassette manufacturing / Reel manufacturing - Orange</option>
+                      <option value="2358">Compressed Bio-gas (CBG)/Bio-CNG Plants (irrespective of the type of feed) producing Fermented Organic Manure &amp; Liquid Fermented Organic Manure as by-products &amp; utilizing entire FOM &amp; LFOM as a fertilizer/manure on land &amp; also not discharging waste water - White</option>
+                      <option value="1058">Compressed oxygen gas from crude liquid oxygen ( without use of any solvents and by maintaining pressure &amp; temperature only for separation of other gases) - White</option>
+                      <option value="1200">Construction &amp; Demolition (C&amp;D) waste Processing Plants - Orange</option>
+                      <option value="1011">Copper Smelter - Red</option>
+                      <option value="1184">Cotton  spinning  and  weaving (medium and large scale)                                                                                                                                                       - Orange</option>
+                      <option value="1060">Cotton and woolen hosiers making ( Dry process only without any dying / washing operation) - White</option>
+                      <option value="1334">Cotton seed De-linting by Acid use (Wastewater generation &lt; 100 KLD) - Orange</option>
+                      <option value="1326">Cotton seed De-linting by Acid use (Wastewater generation &gt; 100 KLD) - Red</option>
+                      <option value="1345">Cotton seed Ginning / De-linting by Mechanical means - Green</option>
+                      <option value="1061">Cotton spinning an. weaving (small scale)  - Green</option>
+                      <option value="1325">Crop research and development - Orange</option>
+                      <option value="2364">Crumb Rubber / Polymer Modified Bitumen - Red</option>
+                      <option value="1185">Cutting, sizing and polishing of marble stone - Green</option>
+                      <option value="1186">Dairy and dairy products  ( small scale)         - Orange</option>
+                      <option value="1187">Dal Mills  - Green</option>
+                      <option value="1062">Decoration of ceramic cups and plates by electric furnace  - Green</option>
+                      <option value="1297">DG Set of capacity &gt; 5 MVA - Red</option>
+                      <option value="1188">DG set of capacity &gt;1MVA but&lt; SMVA          - Orange</option>
+                      <option value="1189">Digital printing on PVC clothes - Green</option>
+                      <option value="1190">Dismantling of rolling stocks (  wagons/coaches)                                                                                                                                                                                    - Orange</option>
+                      <option value="1065">Distilled water ( without boiler) with electricity as source of heat  - Green</option>
+                      <option value="1014">Distillery ( molasses / grain /yeast based) - Red</option>
+                      <option value="1016">Dry   coal        processing,       mineral processing,    industries      involving ore         sintering,           pelletisating,  Grinding and Pulverisation - Orange</option>
+                      <option value="1191">Dry Cell Battery (excluding manufacturing of electrodes) and assembling  &amp; Changing of acid lead battery on micro scale - Orange</option>
+                      <option value="1015">Dyes and Dye- Intermediates - Red</option>
+                      <option value="1066">Electric lamp ( bulb) and GE manufacturing by assembling only - White</option>
+                      <option value="1067">Electrical and electronic item assembling ( completely dry process) - White</option>
+                      <option value="1192">Emery powder ( fine dust of sand) manufacturing - Green</option>
+                      <option value="1193">Engineering and fabrication units (dry process without any heat treatment / metal surface finishing operations / painting) - White</option>
+                      <option value="2357">Engineering with Painting Activity - Orange</option>
+                      <option value="1353">Engineering without Painting Activity - Green</option>
+                      <option value="1195">Facility of handling, storage and transportation of food grains in bulk - Green</option>
+                      <option value="1018">Fermentation Industry including water        polluting manufacture    of      yeast,        beer, distillation      of    alcohol      (Extra Neutral Alcohol)                                                                                                                                                        - Orange</option>
+                      <option value="1022">Ferrous    and  Non-  ferrous    metal    extraction     involving        different     furnaces through melting, refining, re-processing,  casting  and  alloy-making                                                                                                                                                                               - Orange</option>
+                      <option value="1021">Fertilizer (basic) (excludingformulation) - Red</option>
+                      <option value="1196">Fertilizer (granulation/ formulation/ Blending only) - Orange</option>
+                      <option value="1023">Fibre glass production andprocessing (excluding moulding) - Red</option>
+                      <option value="1024">Fire crackers manufacturing and bulk storage facilities - Red</option>
+                      <option value="1198">Fish processing and packing (excluding chilling of fishes)                                                                                                                                                                 - Orange</option>
+                      <option value="1026">Flakes  from  rejected PET bottle              - Orange</option>
+                      <option value="1068">Flavoured betel nuts production/ grinding ( completely dry mechanical operations) - White</option>
+                      <option value="1324">Flim Shooting - White</option>
+                      <option value="1069">Flour mills (dry process) - Green</option>
+                      <option value="1070">Fly ash bricks/ block manufacturing - White</option>
+                      <option value="1027">Flyash export, transport &amp; disposal facilities - Green</option>
+                      <option value="1199">Foam manufacturing                                       - Orange</option>
+                      <option value="2360">Food and food processing including fruits and vegetable processing - Orange</option>
+                      <option value="1201">Forging of ferrous and non- ferrous metals  ( using oil  and  gas fired furnaces) - Orange</option>
+                      <option value="1250">Formulation/palletization of camphor tablets,naphthalene balls from camphor/ naphthalene powders - Orange</option>
+                      <option value="1202">Formulation/petletization of camphor tablets,naphthalene balls camphor/ naphthalene powders - Orange</option>
+                      <option value="1071">Fountain pen manufacturing by assembling only - White</option>
+                      <option value="1344">Gaushalas (Wastewater generation &lt; 100 KLD) - Green</option>
+                      <option value="1333">Gaushalas with overall wastewater generation of 100 KLD or more - Orange</option>
+                      <option value="1318">General Wire Industries like wire drawing, barbed wire, Chain
+                links, making units without wet process. - White</option>
+                      <option value="1074">Glass , ceramic, earthen potteries, tile and tile manufacturing using electrical kiln or not Involving fossil fuel kiln - Green</option>
+                      <option value="1072">Glass ampules and vials making from glass tubes - White</option>
+                      <option value="1203">Glass ceramics, earthen potteries and  fired kilns, coating on glasses usingcerium    fluorides    and magnesiumfluoride etc - Orange</option>
+                      <option value="1073">Glass putty and sealant ( by mixing with machine only) - White</option>
+                      <option value="1251">Glass, Ceramic, Earthen Potteries and Tile manufacturing, using oil or gas fired Kiln, Coating on glasses using Cerium Fluoride, Magnesium Fluoride etc - Orange</option>
+                      <option value="1204">Glue from starch (physical mixing) with gas / electrically operated oven /boiler - Green</option>
+                      <option value="2359">Gold / Silver Refining, Melting &amp; Testing Units (using more than 1 litre of sulphuric acid/ nitric acid per month) - Orange</option>
+                      <option value="1075">Gold and silver smithy (purification with acid, smelting operating and sulfuric acidpolishing operation) (using less than or equal to 1 litre of Sulphuric Acid / Nitric Acid permonth. - Green</option>
+                      <option value="1354">Gold Assaying &amp; Hallmarking Centres - Orange</option>
+                      <option value="1351">Granite / Stone Cutting and Polishing - Green</option>
+                      <option value="1205">Gravure printing, digital printing on flex, vinyl                                                                                                                                                                             - Orange</option>
+                      <option value="1076">Ground nut decorticating - White</option>
+                      <option value="1077">Handloom/ carpet weaving ( without dying and bleaching operation) - White</option>
+                      <option value="1028">Health-care Establishment ( as defined in BMW Rules) - Red</option>
+                      <option value="1206">Heat treatment using oil fired furnace   ( without cyaniding)                                                                                                                                                         - Orange</option>
+                      <option value="1311">Heat treatment with any of the new technology like ultrasound probe, induction hardening, Ionization beam, gas carburizing etc - Green</option>
+                      <option value="1030">Heavy engineering including Ship Building (with investment on Plant &amp; Machineries more than Rs. 10 crores) - Red</option>
+                      <option value="1352">Herbal Products without using solvent - Green</option>
+                      <option value="1031">Hot mix plants                                          - Orange</option>
+                      <option value="1320">Hotels (&lt; 3 star) or hotels having &gt; 20 rooms and less than 100 rooms or having waste water generation &gt; 10 KLD and less than 100 KLD and having a coal/Oil fired Boiler - Orange</option>
+                      <option value="1321">Hotels (up to 20 rooms and without boilers) and having waste water generation &lt; 10 KLD and no hazardous waste generation - Green</option>
+                      <option value="1319">Hotels having overall waste water generation @ 100 KLD and more (or) having rooms 100 and above - Red</option>
+                      <option value="1208">Ice cream - Orange</option>
+                      <option value="1037">Industrial carbon including electrodes and graphite blocks,activated carbon, carbon black - Red</option>
+                      <option value="1298">Industries    engaged   in    recycling / reprocessing/       recovery/reuse    of   Hazardous Waste under schedule  iv of HW ( M, H&amp; TBM) rules, 2008 - Items namely Used Oil - As per specifications prescribed from time  to time. - Orange</option>
+                      <option value="1299">Industries    engaged   in    recycling / reprocessing/       recovery/reuse    of  Hazardous Waste under schedule iv of  HW( M, H&amp; TBM) rules, 2008 - Items namelyWaste  Oil  ---As  per specifications from time to time - Orange</option>
+                      <option value="1293">Industries  engaged in  recycling/ reprocessing/      recovery/reuse of Hazardous Waste under schedule iv HW( M, H&amp; TBM) rules, 2008 - Items namely -Paint and ink Sludge/residues - Orange</option>
+                      <option value="1294">Industries engaged  in recycling/reprocessing/    recovery/ reuse of Hazardous Waste under schedule iv of HW( M, H&amp; TBM) rules, 2008 -  Items  namely  - Brass  Dross,Copper  Dross,Copper Oxide  Mill Scale,Copper Reverts, Cake &amp; Residues, Waste Copper and copper  alloys in dispersible form, Slags   from  copper processing for further  processing or  refining, Insulated Copper Wire Scrap/copper with PVC sheathing including ISRI-code material  namely "Druid" Jelly filled Copper  cables "Zinc  Dross-Hot dip  GalvanizersSLAB, Zinc  Dross-Bottom Dross, Zinc   ash/Skimming  arising   from galvanizing     and     die        casting operations, Zinc     ash/Skimming/ other zinc bearing    wastes   arising         from smelting and refining, Zinc  ash and  residues including zinc alloy   residues in  dispersible from, - Orange</option>
+                      <option value="1300">Industries engaged in recycling / reprocessing/ recovery/reuse of Hazardous Waste underschedule iv of HAY( Nil, Htlz TBM) rules, 2008 - Items namely - Spent catalyst containing nickel, cadmium, Zinc, copper, arsenic, vanadium and cobalt, - Red</option>
+                      <option value="1301">Industries engaged in recycling / reprocessing/ recovery/reuse of Hazardous Waste underschedule iv of HW( M, H&amp; TBM) rules, 2008 - Items namely -Dismantlers RecyclingylantsComponents of waste electricaland electronic assemblescomprising accumulators andother batteries included on listA, mercury-switches, activated glass cuilets from cathode-ray tubes and other activated glass and PCB-capacitors, or any other component contaminated withSchedule 2 constituents (e.g.cadmium, mercury, lead,polychlorinated biphenyl) to an extent that they exhibit hazard characteristics indicated in partC of this Schedule. - Red</option>
+                      <option value="1042">Industries engaged in recycling / reprocessing/ recovery/reuse of Hazardous Waste underschedule iv of HW( M, H&amp; TBM) rules, 2008 - Items namely -Spent cleared metal catalystcontaining copper„Spent cleared metal catalystcontaining zinc„ - Red</option>
+                      <option value="1305">Industries engaged in recycling /reprocessing/ recovery/reuse ofHazardous Waste under schedule iv of HW( M, H&amp; TBM) rules, 2008 -Items namely -Integrated Recycling Plants -Components of waste electrical and electronic assembles comprisingaccumulators and other batteriesincluded on list A, mercury-switches, activated glass cutletsfrom cathode-ray tubes and other activated glass and PCB-capacitors,or any other componentcontaminated with Schedule 2constituents (e,g, cadmium,mercury, lead, polychlorinatedbiphenyl) to an extent that theyexhibit hazard characteristicsindicated in part C of this Schedule. - Red</option>
+                      <option value="1304">Industries engaged in recycling /reprocessing/ recovery/reuse ofHazardous Waste under schedule iv of HW{ M, H&amp; TBM) rules, 2008 -items namely -Lead acid battery plates and otherlead scrap/ashes/residues notcovered under Batteries  (Management and Handling) Rules, 2001. [ * Battery scrap, namely:Lead battery plates covered by ISRI, Code word "Rails" Battery lugscovered by ISR1, Code word "Rakes". Scrap drained/dry while intact, lead batteries covered by ISRI, Code word "rains". - Red</option>
+                      <option value="1087">Industry   or      processes   involving   foundry operations                                                                                                                                            - Orange</option>
+                      <option value="1122">Industry or process involving'metal surface treatment orprocess such as pickling/electroplating/paint stripping/heat treatment using cyanidebath/ phosphating or finishingand anodizing / enamellings/galvanizing - Red</option>
+                      <option value="1079">Insulation and other coated papers (excluding paper or pipe manufacturing)  - Green</option>
+                      <option value="1123">Iron &amp; Steel (involvingprocessing from ore/ integrated steel plants) and or Sponge Iron units - Red</option>
+                      <option value="1210">Jute processing without dyeing - Orange</option>
+                      <option value="1125">Lead acid batterymanufacturing(excluding assembling and charging of lead- acid battery in micro scale)' - Red</option>
+                      <option value="1081">Leather cutting and stitching (more than 10 machine and using motor) - White</option>
+                      <option value="1082">Leather foot wear and leather products (excluding tanning and hide processing except cottage scale) - Green</option>
+                      <option value="1126">Lime   manufacturing  (using      lime kiln) - Orange</option>
+                      <option value="1211">Liquid    floor   cleaner,   black  phenyl, liquid   soap,   glycerol     mono-stearate  manufacturing - Orange</option>
+                      <option value="1083">Lubricating oil, greases or petroleum based products (only blending at nomad temperature) - Green</option>
+                      <option value="1349">Manufacture of Egg Trays - Green</option>
+                      <option value="1342">Manufacture of Herbal Products using solvent extraction - Orange</option>
+                      <option value="1339">Manufacture of Lithium Ion &amp; Lithium Polymer Cell &amp; Battery - Orange</option>
+                      <option value="1340">Manufacture of Rubber Tyres with effluent generation less than 100 KLD and fuel consumption less than 24 TPD - Orange</option>
+                      <option value="1330">Manufacture of Rubber Tyres with effluent generation more than 100 KLD and fuel consumption more than 12 TPD - Red</option>
+                      <option value="1341">Manufacture of tubes from butyl rubber - Orange</option>
+                      <option value="1357">Manufactures of Jointing Mortar, Tile Adhesive, Plaster - Orange</option>
+                      <option value="1215">Manufacturing    of  tooth  powder, toothpaste, talcum powder and other cosmetic items - Orange</option>
+                      <option value="1084">Manufacturing of coir items from coconut husks - White</option>
+                      <option value="1127">Manufacturing of explosives,detonators, fuses includingmanagement and handlingactivities - Red</option>
+                      <option value="1128">Manufacturing of glass                             - Orange</option>
+                      <option value="1129">Manufacturing of glue andgelatin - Red</option>
+                      <option value="1213">Manufacturing of iodized salt fromcrude/ raw salt - Orange</option>
+                      <option value="1130">Manufacturing of lubricating oils ,grease and petroleum based products - Red</option>
+                      <option value="1085">Manufacturing of metal caps containers etc - White</option>
+                      <option value="1212">Manufacturing of mirror from sheet glass                                                                                                                                                                          - Orange</option>
+                      <option value="1214">Manufacturing of mosquito repellent coil                                                                                                                                                                                 - Orange</option>
+                      <option value="1086">Manufacturing of optical lenses (using electrical furnace) - Green</option>
+                      <option value="1131">Manufacturing of paintsvarnishes, pigments andintermediate (excludingblending/ mixing) - Red</option>
+                      <option value="1088">Manufacturing of pasted veneers using gas fired boiler or thermic fluid heater and by sun drying - Green</option>
+                      <option value="1089">Manufacturing of shoe brush and wire brush - White</option>
+                      <option value="1090">Manufacturing of Silica Gel - Orange</option>
+                      <option value="1132">Manufacturing of Starch/Sago                - Orange</option>
+                      <option value="1216">Mechanized  laundry  using oil firedboiler - Orange</option>
+                      <option value="1091">Medical oxygen - White</option>
+                      <option value="1348">Metal Injection Moulding using Electrical heater - Green</option>
+                      <option value="1337">Metal Injection Moulding with fuel burning more than 12 TPD - Orange</option>
+                      <option value="1133">Milk processes and dairyproducts(integrated project) - Red</option>
+                      <option value="1092">Mineralized water - Green</option>
+                      <option value="1217">Modular    wooden    furniture  from particle board, MDF&lt; swan timber etc, Ceiling tiles/ partition board from saw dust,  wood  chips etc.,  and  other   agricultural     waste   using synthetic adhesive resin, wooden box making ( With boiler) - Orange</option>
+                      <option value="1323">Multiplex Screening - White</option>
+                      <option value="2361">Municipal Solid Waste (MSW) processing facility / sanitary landfill - Red</option>
+                      <option value="1295">New highway construction project         - Orange</option>
+                      <option value="1136">Non-alcoholic              beverages(soft drink)  &amp;  bottling  of  alcohol/ non alcoholic products                                                                                                                                                    - Orange</option>
+                      <option value="1137">Nuclear power plant - Red</option>
+                      <option value="1138">Oil &amp;  Gas  extraction including  CBM (offshore  &amp; onshore extraction through drilling wells) - Red</option>
+                      <option value="1093">Oil mill ghani &amp; extraction ( no hydrogenation / refining) - Green</option>
+                      <option value="1140">Oil Refinery (mineral Oil or Petro Refineries) - Red</option>
+                      <option value="1094">Organic and inorganic nutrients ( by physical mixing) - White</option>
+                      <option value="1141">Organic Chemicalsmanufacturing - Red</option>
+                      <option value="1095">Organic manure (manual mixing) - White</option>
+                      <option value="1218">Packing materials manufacturing from non asbestos fibre vegetable fibre yarn - Green</option>
+                      <option value="1309">Packing of powdered milk - White</option>
+                      <option value="1097">Packing of powdered mill - White</option>
+                      <option value="1219">Paint blending-and mixing (Ball mill) - Orange</option>
+                      <option value="1096">Paints and varnishes (mixing andblending) - Orange</option>
+                      <option value="1098">Paper pins and u clips - White</option>
+                      <option selected="selected" value="1142">Parboiled Rice Mills - Orange</option>
+                      <option value="2362">Parboiled Rice Mills having waste water generation &gt; 100 KLD and fuel consumption &gt; 12 TPD. - Red</option>
+                      <option value="1143">Pesticides (technical} (excludingformulation) - Red</option>
+                      <option value="1144">Petrochemicals (Manufacture of and not merely use of as raw material) - Red</option>
+                      <option value="1307">Petrochemicals Manufacturing (including processing ofEmulsions of oil and water ) - Red</option>
+                      <option value="1220">Pharmaceutical Formulation and for R &amp; D purpose (for sustained release/extended release of drugs only and not for commercial purpose)  - Orange</option>
+                      <option value="1145">Pharmaceuticals - Red</option>
+                      <option value="1099">Phenyl/toilet cleaner formulation and bottling - Green</option>
+                      <option value="1147">Phosphate rock processing plant. - Red</option>
+                      <option value="1148">Phosphorous and its compounds - Red</option>
+                      <option value="1149">Photographic film and itschemicals - Red</option>
+                      <option value="1221">Ply-board  manufacturing (includingVeneer and laminate) with oil firedboiler/ thermlc   fluid    heater(withoutresin plant) - Orange</option>
+                      <option value="1222">Potable alcohol ( IMFL) by blending,bottling of alcohol products - Orange</option>
+                      <option value="1312">Power generation plant [exceptWind and Solar renewablepower plants of all capacities and Mini Hyde! power plant of capacity &lt;25MW[ - White</option>
+                      <option value="1103">Power looms (without dye and bleaching) - Green</option>
+                      <option value="1224">Printing ink manufacturing - Orange</option>
+                      <option value="1225">Printing or etching of glass sheet usinghydrofluoric acid - Orange</option>
+                      <option value="1104">Printing press                                              - Orange</option>
+                      <option value="1152">Processes involving chlorinatedhydrocarbons - Red</option>
+                      <option value="1226">Producer gas plant using conventional   up drift coal gasification (  linked to  rolling mills glass and ceramic industry  refectories for dedicated fuel supply) - Orange</option>
+                      <option value="1105">Puffed rice (muri) (using gas or electrical heating system) - Green</option>
+                      <option value="1308">Pulp &amp; Paper ( Large-Agro + wood) , Small Pulp &amp;Paper ( agro based-wheatstraw/rice husk) - Red</option>
+                      <option value="1306">Pulp &amp; Paper ( waste paper based units with bleaching process tomanufacture writing &amp; printingpaper) - Red</option>
+                      <option value="1302">Pulp &amp; Paper ( waste paper based without bleaching process tomanufacture Kraft paper) - Red</option>
+                      <option value="1227">Pulverization of bamboo and scrap wood  - Green</option>
+                      <option value="1343">Railway Bogie Manufacturing with painting activity but without any metal surface treatment or process such as pickling / electroplating / paint stripping / heat treatment using cyanide bath / phosphating or finishing and anodizing / enamellings / galvanizing - Orange</option>
+                      <option value="1153">Railway locomotive workshop/Integrated road transportworkshop/Authoried servicecenters - Red</option>
+                      <option value="1329">Recovery of Organics from Mother Liquors including Piperazine - Red</option>
+                      <option value="1228">Repairing of electric motors and generators ( dry mechanical process) - White</option>
+                      <option value="1154">Reprocessing of used oils and waste oils - Red</option>
+                      <option value="1107">Reprocessing of waste cotton - Green</option>
+                      <option value="1229">Reprocessing of waste plastic Including PVC - Orange</option>
+                      <option value="1230">Rice mill (Rice hullers only) - Green</option>
+                      <option value="1231">Rolling mill ( gas fired) and cold rolling mill  - Green</option>
+                      <option value="1296">Rolling mill (oil or coal fired) and cold         rolling mill                                                                                                                                                                              - Orange</option>
+                      <option value="1108">Rope (plastic and cotton) - White</option>
+                      <option value="1109">Rubber goods industry (with gas operated baby boiler) - Green</option>
+                      <option value="1232">Saw mills - Green</option>
+                      <option value="1110">Scientific and mathematical instrument manufacturing - White</option>
+                      <option value="1233">Seasoning of wood in steam heated chamber - Green</option>
+                      <option value="1335">Seed processing – drying with fuel - Orange</option>
+                      <option value="1346">Seed processing by Solar drying - Green</option>
+                      <option value="1327">Seed processing with isolated storage of LPG of atleast 50 T - Red</option>
+                      <option value="1155">Ship Breaking Industries - Red</option>
+                      <option value="1234">Silk screen printing, sari printing by wooden blocks - Orange</option>
+                      <option value="1156">Slaughter house (as pernotification S.O.270(E)dated26.03.2001)and meat processingindustries, bone mill, processing of animal horn, hoofs and other body parts - Red</option>
+                      <option value="1111">Soap manufacturing (hand made,without steam boiling / boiler)  - Green</option>
+                      <option value="1112">Solar module non conventional energy apparatus manufacturing unit - White</option>
+                      <option value="1113">Solar power generation through solar photovoltaic cell, wind power and mini hydel power (less than 25 MW)  - White</option>
+                      <option value="1313">Solar power generation through solar photovoltaic cell, wind power and mini hydel power more than 25 MW - White</option>
+                      <option value="1328">Solvent recovery through Distillation - Red</option>
+                      <option value="1235">Spice grinding (&gt;20 hp motor) - Green</option>
+                      <option value="1114">Spice grinding (upto-20 HP motor) - Green</option>
+                      <option value="1236">Spray  painting,  paint  baking, paint shipping                                                                                                                                                                                 - Orange</option>
+                      <option value="1157">Steel  and  steel products  using various furnaces like blast furnace  open hearth     furnace/ induction furnace/ arc furnace/ submerged                                                                                                                                                                                        arc furnace /basic oxygen furnace/hot rolling reheated furnace                                                                                                                      - Orange</option>
+                      <option value="1115">Steel furniture without spray painting - Green</option>
+                      <option value="1116">Steeping and processing of grains - Green</option>
+                      <option value="1158">Stone crushers                                           - Orange</option>
+                      <option value="1159">Sugar ( excluding Khandsari) - Red</option>
+                      <option value="1160">Surgical  and   medical     products  including prophylactics and latex - Orange</option>
+                      <option value="1310">Surgical and medical products assembling only (not involving effluent / emission generating processes) - White</option>
+                      <option value="1117">Surgical and medical products not involving effluent / emission generating processes. - White</option>
+                      <option value="1164">Synthetic        rubber       excluding molding                                                                                                                                                                                           - Orange</option>
+                      <option value="1118">Synthetic detergent formulation - Green</option>
+                      <option value="1161">Synthetic detergents and soaps/excluding formulation)                                                                                                                                              - Orange</option>
+                      <option value="1162">Synthetic fibers including rayon ,tyre cord, polyester filamentyarn - Red</option>
+                      <option value="1163">Synthetic resins                                            - Orange</option>
+                      <option value="1237">Tamarind powder manufacturing - Green</option>
+                      <option value="1165">Tanneries - Red</option>
+                      <option value="1238">Tea processing ( with boiler)  - Green</option>
+                      <option value="1119">Tephlon based products                            - Orange</option>
+                      <option value="1166">Thermal Power Plants - Red</option>
+                      <option value="1240">Thermo Meter Manufacturing - Orange</option>
+                      <option value="1239">Thermocol  manufacturing  (with boiler) - Orange</option>
+                      <option value="1167">Tobacco products including cigarettes and tobacco/ opium processes  - Orange</option>
+                      <option value="1241">Transformer repairing/ manufacturing( dry process only) - Orange</option>
+                      <option value="1242">Tyres  and  tubes  vulcanization/  hot retreating - Orange</option>
+                      <option value="1120">Tyres and tube retreating (without boilers)  - Green</option>
+                      <option value="1168">Vegetable        oil         manufacturing  solvent   extraction    and  refinery /hydrogenated  oils                                                                                                                                                    - Orange</option>
+                      <option value="1292">Wire drawing and wire netting                      - Orange</option>
+                      <option value="1169">Yarn / Textile processinginvolving any effluent/emission generating processes includingbleaching, dyeing, printing andcolouring - Red</option>
+                      <option value="1170">Zinc Smelter - Red</option>
+                
+                    </select>
+                  </div>
+            
+                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="tab-1">
+             <div class="card direct-chat direct-chat-primary px-0">
+            <div class="card-header ui-sortable-handle header-card" style="cursor: move;">
+              <h3 class="card-title text-white">Line of Manufacture</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <!-- Conversations are loaded here -->
+              <div class="col-md-12 mt-3 d-flex" id="padding">
+                <div class="col-md-4">
+                  <div class="form-group row">
+                    <label class="col-form-label">	Item *</label>
+                    <div class="col-lg-12 d-flex">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group row">
+                    <label class="col-form-label">	Quantity Per*</label>
+                    <div class="col-lg-12 d-flex">
+                      <select name="ctl00$ContentPlaceHolder1$ddlquantityper" id="ctl00_ContentPlaceHolder1_ddlquantityper" tabindex="1" class="form-control">
+                        <option value="--Select--">--Select--</option>
+                        <option value="Day">Day</option>
+                        <option value="Week">Week</option>
+                        <option value="Month">Month</option>
+                        <option value="Years">Years</option>
+                  
+                      </select>
+                    </div>
+                  </div>
+                </div>
+<div class="col-md-4">
+                  <div class="form-group row">
+                    <label class="col-form-label">	Quantity*</label>
+                    <div class="col-lg-12 d-flex">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <div class="col-md-12 d-flex" id="padding">
+                
+                <div class="col-md-4">
+                  <div class="form-group row">
+                    <label class="col-form-label">	Quantity In</label>
+                    <div class="col-lg-12 d-flex">
+                      <select name="ctl00$ContentPlaceHolder1$ddlquantityin" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlquantityin\',\'\')', 0)" id="ctl00_ContentPlaceHolder1_ddlquantityin" tabindex="1" class="form-control">
+                        <option selected="selected" value="--Select--">--Select--</option>
+                        <option value="KG">KG</option>
+                        <option value="Tone">Tone</option>
+                        <option value="Liters">Liters</option>
+                        <option value="Others">Others</option>
+                  
+                      </select>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+                
+         
+
+              <!--/.direct-chat-messages-->
+
+              <!-- Contacts are loaded here -->
+              
+              <!-- /.direct-chat-pane -->
+            </div>
+            <!-- /.card-body -->
+            
+            <!-- /.card-footer-->
+          </div>
+            </div>
+
+            <!-- /.card-body -->
+            <!-- /.card-footer-->
+
+            <div class="tab-content" id="tab-2">
+                <div class="card direct-chat direct-chat-primary">
+            <div class="card-header ui-sortable-handle header-card" style="cursor: move;">
+              <h3 class="card-title text-white"> Raw Materials Used in Process</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <!-- Conversations are loaded here -->
+              <div class="col-md-12 mt-3 d-flex" id="padding">
+                <div class="col-md-4">
+                  <div class="form-group row">
+                    <label class="col-form-label">	Item *</label>
+                    <div class="col-lg-12 d-flex">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group row">
+                    <label class="col-form-label">	Quantity Per*</label>
+                    <div class="col-lg-12 d-flex">
+                      <select name="ctl00$ContentPlaceHolder1$ddlquantityper" id="ctl00_ContentPlaceHolder1_ddlquantityper" tabindex="1" class="form-control">
+                        <option value="--Select--">--Select--</option>
+                        <option value="Day">Day</option>
+                        <option value="Week">Week</option>
+                        <option value="Month">Month</option>
+                        <option value="Years">Years</option>
+                  
+                      </select>
+                    </div>
+                  </div>
+                </div>
+<div class="col-md-4">
+                  <div class="form-group row">
+                    <label class="col-form-label">	Quantity*</label>
+                    <div class="col-lg-12 d-flex">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <div class="col-md-12 d-flex" id="padding">
+                
+                <div class="col-md-4">
+                  <div class="form-group row">
+                    <label class="col-form-label">	Quantity In</label>
+                    <div class="col-lg-12 d-flex">
+                      <select name="ctl00$ContentPlaceHolder1$ddlquantityin" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlquantityin\',\'\')', 0)" id="ctl00_ContentPlaceHolder1_ddlquantityin" tabindex="1" class="form-control">
+                        <option selected="selected" value="--Select--">--Select--</option>
+                        <option value="KG">KG</option>
+                        <option value="Tone">Tone</option>
+                        <option value="Liters">Liters</option>
+                        <option value="Others">Others</option>
+                  
+                      </select>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+                
+         
+
+              <!--/.direct-chat-messages-->
+
+              <!-- Contacts are loaded here -->
+              
+              <!-- /.direct-chat-pane -->
+            </div>
+            <!-- /.card-body -->
+            
+            <!-- /.card-footer-->
+          </div>
+            </div>
+    
+
+                <div class="form-buttons">
+                <button class="btn-back" onclick="prevStep()" id="backBtn">Back</button>
+
+                <button class="btn-next" onclick="nextStep()" id="nextBtn">Next</button>
+                   <a href="PowerDetails-V2.html"> <button onclick="submitForm()" id="submitBtn">Submit</button></a>
+           </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

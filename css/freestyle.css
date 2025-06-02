@@ -4,6 +4,8 @@ i.fi {
   .navbar-white {
     background: #1b1e6f;
     color: #1f2d3d;
+    background: linear-gradient(90deg, hsla(281, 37%, 45%, 1) 0%, hsla(1, 62%, 48%, 1) 100%);
+    color:linear-gradient(90deg, hsla(281, 37%, 45%, 1) 0%, hsla(1, 62%, 48%, 1) 100%);
 }
   .dashboard-box {
     
@@ -158,9 +160,98 @@ span.brand-text.text-white.fw-bold {
     background-size: cover;
     background-position: left;
 }
-/*
+
+        .progress-bar {
+            display: flex !important;
+            margin: 0 auto 20px !important;
+            flex-direction: row;
+            background: transparent !important;
+        }
+
+        .step {
+            flex: 1;
+            font-size: 12px;
+            padding: 12px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+            clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%, 10% 50%);
+            margin-right: 5px;
+            background-color: #ccc;
+            transition: background-color 0.3s ease;
+        }
+
+        .step:last-child {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 10% 50%);
+        }
+
+        .step.active {
+            background-color: rgb(174, 31, 97);
+        }
+
+        .step.completed {
+            background-color: hsla(281, 37%, 45%, 1);
+        }
+
+        .tab-content {
+            display: none;
+            background: white;
+            border-radius: 6px;
+            margin: 0 auto;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .form-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: hsla(281, 37%, 45%, 1);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-back {
+            background-color: hsla(281, 37%, 45%, 1);
+        }
+
+        .btn-next {
+            background-color: rgb(174, 31, 97);
+        }
+
+        button[disabled] {
+            background-color: #aaa;
+            cursor: not-allowed;
+        }
+
+        .header-card {
+            background: rgb(174, 31, 97);
+        }
+
+  
+
+        .circular-image {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
 .content-wrapper {
   
   min-height: fit-content !important;
   height: calc(85vh - 85px);  
-}subtract header height */
+}
